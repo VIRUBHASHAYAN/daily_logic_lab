@@ -1,0 +1,14 @@
+Today I Cover all  the key concept of Machine Learning.
+
+which is about :
+       
+Types of model.
+
+Problems which occurs during Building Model.
+
+Evaluting the Model based on which type of MOdel is that.
+
+Explore new things about Deployment.
+
+
+         
