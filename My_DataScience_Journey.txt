@@ -1,0 +1,100 @@
+My Data Science Learning Journey
+ Python Basics
+Variables
+Data types
+Loops
+Functions
+List comprehension
+OOP basics
+What I Learned
+
+Python is the foundation of Data Science because it helps handle data, automation, and machine learning workflows easily.
+
+2. NumPy
+Arrays
+Vectorization
+Broadcasting
+Mathematical operations
+What I Learned
+
+NumPy makes calculations faster compared to normal Python lists because operations happen at low-level optimized memory.
+
+3. Pandas
+DataFrames
+Data cleaning
+Handling null values
+GroupBy
+Merging datasets
+What I Learned
+
+Most real-world data is messy. Pandas helps clean and analyze structured data efficiently.
+
+4. Data Visualization
+Matplotlib
+Seaborn
+What I Learned
+
+Visualization helps understand patterns, trends, and outliers better than raw numbers.
+
+5. Statistics
+Mean / Median / Mode
+Standard deviation
+Variance
+Correlation
+Probability
+What I Learned
+
+Statistics helps understand data behavior before training models.
+
+6. Machine Learning
+Supervised Learning
+Linear Regression
+Logistic Regression
+Decision Tree
+Random Forest
+KNN
+SVM
+Unsupervised Learning
+K-Means
+DBSCAN
+PCA
+What I Learned
+
+Machine Learning finds patterns from data and makes predictions without manually writing rules.
+
+7. Model Evaluation
+Accuracy
+Precision
+Recall
+F1 Score
+MSE
+RMSE
+What I Learned
+
+A model is not “good” just because it predicts correctly sometimes. Metrics help measure actual performance.
+
+8. Feature Engineering
+Encoding
+Scaling
+Feature selection
+What I Learned
+
+Good features can improve model performance more than changing algorithms.
+
+9. Projects I Built
+House Price Prediction
+Spam Detection
+Customer Segmentation
+Image Classification
+10. What I Realized
+
+Data Science is not just training models.
+Most work actually happens in:
+
+cleaning data
+understanding problems
+improving features
+evaluating models
+Final Note
+
+I’m still learning every day and improving through practice, projects, debugging, and consistency.
