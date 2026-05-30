@@ -1,0 +1,60 @@
+Day Learning Log
+
+Date: 30-05-2026
+
+Topic: AI Skills Required in Industry
+
+Today I learned that companies do not only look for knowledge of Machine Learning algorithms. They expect a combination of technical, practical, and deployment skills.
+
+Key Industry AI Skills:
+
+1. Programming
+   - Python is the most commonly used language.
+   - Writing clean and efficient code is important.
+
+2. Data Handling
+   - Data cleaning and preprocessing.
+   - Working with Pandas and NumPy.
+   - Understanding missing values and outliers.
+
+3. Machine Learning
+   - Supervised and Unsupervised Learning.
+   - Model evaluation and hyperparameter tuning.
+   - Understanding overfitting and underfitting.
+
+4. SQL
+   - Querying databases.
+   - Joining tables and data extraction.
+   - Frequently required in AI and Data Science roles.
+
+5. Deep Learning
+   - Neural Networks.
+   - CNNs for images.
+   - RNNs and Transformers for sequence data.
+
+6. MLOps and Deployment
+   - Flask/FastAPI.
+   - Docker basics.
+   - Deploying models as APIs.
+   - Model monitoring.
+
+7. Cloud Platforms
+   - AWS, Azure, or Google Cloud.
+   - Basic cloud deployment knowledge.
+
+8. Generative AI
+   - Prompt Engineering.
+   - Working with LLMs.
+   - RAG (Retrieval-Augmented Generation).
+   - AI Agent development.
+
+9. Git and GitHub
+   - Version control.
+   - Collaboration and project management.
+
+10. Communication and Business Understanding
+    - Explaining technical concepts clearly.
+    - Understanding business problems and converting them into AI solutions.
+
+My Key Takeaway:
+The industry values people who can solve real-world problems and deploy solutions, not just train machine learning models in notebooks. Building projects, deploying models, and demonstrating practical skills are as important as understanding algorithms.
