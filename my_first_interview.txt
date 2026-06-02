@@ -1,0 +1,38 @@
+First Interview Experience
+Date: 02-06-2026
+
+Today I attended my first Machine Learning interview.
+
+Overall Experience:
+The interview went better than I expected. The interviewer mentioned that my overall performance was good. I was able to answer most of the Machine Learning and Data Science questions confidently.
+
+Questions I Answered Well:
+- Machine Learning concepts
+- Clustering
+- Evaluation metrics
+- Recommendation systems
+- General ML workflow
+
+Questions I Struggled With:
+- File Handling in Python
+- Advanced Python concepts
+- Some deep Python-related questions
+
+What I Learned:
+1. Interviews don't only focus on Machine Learning.
+2. Strong Python fundamentals are important.
+3. Even if a topic feels unrelated to my daily work, interviewers may still ask about it.
+4. Communication and confidence matter along with technical knowledge.
+
+My Feelings:
+I felt nervous at the beginning, but I became more comfortable as the interview progressed. I was happy when the interviewer said my overall performance was good.
+
+Action Plan:
+- Revise Python file handling.
+- Learn advanced Python concepts.
+- Practice explaining concepts clearly.
+- Attend more mock interviews.
+- Continue building ML projects.
+
+Key Takeaway:
+My ML knowledge is strong, but I need to improve my Python fundamentals. This interview showed me exactly what skills I should focus on next.
