@@ -1,0 +1,36 @@
+Machine Learning Learning Notes
+
+Date: 04-06-2026
+
+Today I learned about Machine Learning and its importance in the industry.
+
+Key Points:
+- Machine Learning is a branch of Artificial Intelligence that enables systems to learn from data.
+- The main types of Machine Learning are:
+  1. Supervised Learning
+  2. Unsupervised Learning
+  3. Reinforcement Learning
+
+Topics I Revised:
+- Data preprocessing
+- Feature selection
+- Train-test split
+- Model training
+- Model evaluation
+
+Important Concepts:
+- Overfitting: Model performs well on training data but poorly on new data.
+- Underfitting: Model performs poorly on both training and test data.
+- Evaluation metrics help measure model performance.
+
+Practical Learning:
+- Trained machine learning models using Python.
+- Saved models using pickle (.pkl) files.
+- Learned that deployment is an important skill after model training.
+- Explored how APIs and frameworks like Flask can be used to serve ML models.
+
+My Goal:
+To become industry-ready by improving my understanding of machine learning, deployment, and real-world projects.
+
+Conclusion:
+Machine Learning is not only about building models. Understanding data, evaluation, deployment, and problem-solving are equally important for becoming a skilled ML engineer.
