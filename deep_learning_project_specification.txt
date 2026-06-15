@@ -1,0 +1,122 @@
+================================================================================
+DEEP LEARNING PROJECT SPECIFICATION & ARCHITECTURE OVERVIEW
+================================================================================
+
+PROJECT TITLE: Real-Time Multi-Class Semantic Segmentation for Autonomous Driving
+PROJECT DOMAIN: Computer Vision / Autonomous Vehicles
+DEVELOPMENT STAGE: Production-Ready Prototype
+
+1. PROJECT OVERVIEW
+--------------------------------------------------------------------------------
+This project implements a deep learning pipeline for real-time pixel-level semantic 
+segmentation tailored for autonomous driving systems. The model processes 
+high-resolution forward-facing camera feeds to identify and classify driving 
+environments into key semantic categories: road, vehicles, pedestrians, sidewalks, 
+traffic signs, and background. 
+
+The primary challenge addressed is balancing high inference speed (Frames Per Second) 
+with strict pixel accuracy requirements necessary for safety-critical edge deployment.
+
+2. SYSTEM ARCHITECTURE & MODEL TOPOLOGY
+--------------------------------------------------------------------------------
+The project utilizes a modified BiSeNet V2 (Bilateral Segmentation Network) 
+architecture to achieve high-speed and accurate performance.
+
+A. Detail Branch:
+   - Captures low-level spatial details (edges, shapes, textures).
+   - Consists of shallow, wide convolutional layers.
+   - Preserves high-resolution features without aggressive downsampling.
+
+B. Semantic Branch:
+   - Captures high-level categorical and contextual information.
+   - Employs a deep encoder with fast downsampling channels to expand reception fields.
+   - Integrates Global Average Pooling (GAP) to capture global scene context.
+
+C. Bilateral Guided Aggregation (BGA) Layer:
+   - Fuses feature maps from both branches using element-wise multiplication and 
+     summation operators to preserve spatial details while embedding rich context.
+
+D. Segmentation Head:
+   - 1x1 Convolution followed by Softmax activation to output probability maps 
+     matching the input image dimensions.
+
+3. TECH STACK & DEPLOYMENT ENVIRONMENTS
+--------------------------------------------------------------------------------
+- Framework: PyTorch 2.3+ / PyTorch Lightning (for clean engineering abstraction)
+- Accelerators: NVIDIA CUDA 12.1, TensorRT (for deployment optimization)
+- Data Pipelines: Albumentations (advanced spatial and pixel-level augmentations)
+- Tracking & MLOps: Weights & Biases (W&B) for hyperparameter tuning and lineage
+- Containerization: Docker (NVIDIA Container Toolkit runtime)
+
+4. DATASET & PREPROCESSING PIPELINE
+--------------------------------------------------------------------------------
+- Target Dataset: Cityscapes Dataset (5,000 finely annotated images, 19 classes)
+- Class Mapping: Simplified into 8 functional macro-classes for execution speed:
+  [Background, Road, Sidewalk, Vehicle, Pedestrian/Rider, Sign/Pole, Sky, Vegetation]
+- Augmentations:
+  * Random horizontal flipping (p=0.5)
+  * Random scaling and cropping (Train resolution: 512x1024)
+  * Brightness, contrast, and saturation jittering
+  * Normalization using ImageNet channel-wise mean and standard deviation
+
+5. LOSS FUNCTION & OPTIMIZATION STRATEGY
+--------------------------------------------------------------------------------
+To mitigate severe class imbalance (e.g., millions of road pixels vs. thousands of 
+pedestrian pixels), a hybrid loss function is utilized:
+
+    Total Loss = 0.4 * Cross-Entropy Loss + 0.6 * Focal Loss + 0.2 * Dice Loss
+
+- Optimizer: AdamW (Weight Decay = 1e-4)
+- Learning Rate Schedule: Cosine Annealing LR scheduler with a warm restart pattern
+- Initial Learning Rate: 3e-4
+- Batch Size: 16 per GPU (Distributed Data Parallel across 2x NVIDIA A100 GPUs)
+
+6. PERFORMANCE METRICS
+--------------------------------------------------------------------------------
+The model's efficacy is measured using standard segmentation matrices:
+- mean Intersection over Union (mIoU): Target > 78.5% on validation set
+- Frequency Weighted IoU (FWIoU): To measure classification over dense areas
+- Inference Latency: Measured in milliseconds (Target: < 25ms per frame on Jetson AGX Orin)
+- Throughput: Frames Per Second (Target: > 40 FPS)
+
+7. PROJECT DIRECTORY STRUCTURE
+--------------------------------------------------------------------------------
+deep-learning-segmentation/
+│
+├── config/
+│   └── base_config.yaml         # Hyperparameters, paths, and training flags
+│
+├── src/
+│   ├── __init__.py
+│   ├── dataset.py               # Custom PyTorch Dataset class and transforms
+│   ├── models/
+│   │   ├── bisenet_v2.py        # Core model definition
+│   │   └── modules.py           # BGA layer and custom convolution blocks
+│   ├── losses.py                # Focal and Dice loss definitions
+│   ├── train.py                 # PyTorch Lightning training loop
+│   └── evaluate.py              # Validation and inference verification logic
+│
+├── deployment/
+│   ├── export_onnx.py           # Serializes PyTorch weights into ONNX format
+│   ├── optimize_tensorrt.py     # Quantizes ONNX model to FP16/INT8 TensorRT engine
+│   └── Dockerfile               # Production environment specification
+│
+├── notebooks/
+│   └── exploratory_analysis.ipynb # EDA on dataset pixel balances
+│
+├── requirements.txt             # Pip dependency manifest
+└── README.md                    # Setup and execution guide
+
+8. PRODUCTION INFERENCE PIPELINE
+--------------------------------------------------------------------------------
+For deployment on autonomous vehicle hardware edge beds:
+1. The PyTorch model checkpoint (.ckpt) is validated and frozen.
+2. Exported to an intermediate Open Neural Network Exchange (ONNX) format.
+3. Compiled into a specialized TensorRT engine using INT8 post-training quantization (PTQ).
+4. Deployed via a C++ execution engine that handles hardware camera frame capture via 
+   OpenCV, schedules GPU execution, and streams binary masks directly to the trajectory-planning 
+   subsystem via ROS2 (Robot Operating System).
+
+================================================================================
+Generated on: 2026-06-15
+================================================================================
