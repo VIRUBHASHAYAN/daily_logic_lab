@@ -1,0 +1,91 @@
+================================================================================
+STATISTICS FOR DATA SCIENCE: CORE CONCEPTS AND PRACTICAL APPLICATIONS
+================================================================================
+
+Statistics is the bedrock of data science. It provides the mathematical frameworks 
+needed to interpret data, separate signal from noise, validate hypotheses, and 
+make reliable predictions. Without a strong statistical foundation, machine learning models 
+risk overfitting, misinterpretation, and systemic bias.
+
+This document outlines the vital statistical disciplines and concepts used 
+by modern data scientists.
+
+--------------------------------------------------------------------------------
+1. DESCRIPTIVE STATISTICS
+--------------------------------------------------------------------------------
+Descriptive statistics summarize and characterize the fundamental features of a dataset.
+
+* Measures of Central Tendency:
+  - Mean: The arithmetic average. Sensitive to outliers.
+  - Median: The middle score in a sorted distribution. Robust against outliers.
+  - Mode: The most frequently occurring value. Useful for categorical data.
+
+* Measures of Dispersion (Spread):
+  - Range: Difference between the maximum and minimum values.
+  - Variance: The average squared deviation from the mean.
+  - Standard Deviation: The square root of the variance, expressing spread in the 
+    same units as the original data.
+  - Interquartile Range (IQR): The range between the 25th percentile (Q1) and the 
+    75th percentile (Q3). Used extensively to identify statistical outliers.
+
+--------------------------------------------------------------------------------
+2. PROBABILITY DISTRIBUTIONS
+--------------------------------------------------------------------------------
+Understanding how data points are distributed allows data scientists to make 
+mathematical assumptions about the population.
+
+* Normal (Gaussian) Distribution: 
+  - Symmetrical, bell-shaped curve where Mean = Median = Mode. 
+  - Follows the Empirical Rule (68-95-99.7 rule) for standard deviations.
+* Binomial Distribution: Models discrete successes/failures over a fixed number of trials.
+* Poisson Distribution: Models the frequency of independent events occurring within a fixed interval.
+* Central Limit Theorem (CLT): States that the distribution of sample means approaches 
+  a normal distribution as sample size grows, regardless of the population's shape. 
+  This is foundational for statistical inference.
+
+--------------------------------------------------------------------------------
+3. INFERENTIAL STATISTICS & HYPOTHESIS TESTING
+--------------------------------------------------------------------------------
+Inferential statistics allows data scientists to draw conclusions about a large 
+population based on a representative sample (e.g., A/B testing a new website feature).
+
+* Hypothesis Testing Framework:
+  - Null Hypothesis (H0): The status quo; assumes no effect or no difference.
+  - Alternative Hypothesis (H1): The claim being tested; assumes an effect exists.
+
+* Metrics for Validation:
+  - p-value: The probability of obtaining results at least as extreme as the observed 
+    results, assuming the null hypothesis is true. A standard threshold is alpha = 0.05.
+  - Type I Error (False Positive): Rejecting the null hypothesis when it is actually true.
+  - Type II Error (False Negative): Failing to reject the null hypothesis when it is false.
+  - Confidence Intervals: A range of values likely to contain the true population parameter 
+    with a specified degree of confidence (e.g., 95%).
+
+--------------------------------------------------------------------------------
+4. STATISTICAL RELATIONSHIPS & ESSENTIAL MODELS
+--------------------------------------------------------------------------------
+Understanding dependencies between variables guides feature engineering and predictive modeling.
+
+* Correlation vs. Causation:
+  - Correlation measures the strength and direction of a linear relationship (Pearson's r).
+  - Crucial rule: Correlation does not imply causation. Confounding variables must be managed.
+
+* Linear Regression:
+  - Models the linear relationship between a dependent variable (Y) and one or more 
+    independent variables (X) by fitting a line that minimizes the residual sum of squares.
+  - Key statistical assumptions: Linearity, Homoscedasticity (equal variance of residuals), 
+    Independence, and Normality of residuals.
+
+--------------------------------------------------------------------------------
+5. BAYESIAN STATISTICS
+--------------------------------------------------------------------------------
+Unlike Frequentist statistics (which relies purely on long-run frequencies), Bayesian 
+statistics treats probability as a measure of belief updated by new evidence.
+
+* Bayes' Theorem formula: P(A|B) = [P(B|A) * P(A)] / P(B)
+* Crucial for dynamic systems, recommendation engines, fraud detection filters, 
+  and handling uncertainty when data points are sparse.
+
+================================================================================
+Generated: June 2026
+================================================================================
