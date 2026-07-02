@@ -1,0 +1,65 @@
+===============================================================================
+               MODEL CONTEXT PROTOCOL (MCP) - USER GUIDE
+===============================================================================
+
+1. WHAT IS MODEL CONTEXT PROTOCOL (MCP)?
+----------------------------------------
+The Model Context Protocol (MCP) is an open-source standard developed by 
+Anthropic. It acts like a standardized "USB port" for Artificial Intelligence. 
+Instead of writing unique code for every single app, database, or tool you 
+want your AI to use, MCP provides a single universal protocol that lets Large 
+Language Models (LLMs) safely connect to external data sources and tools.
+
+2. HOW THE ARCHITECTURE WORKS
+-----------------------------
+MCP uses a simple Client-Server architecture:
+
+   [ AI CLIENT ]             [ MCP SERVER ]            [ DATA SOURCE / TOOL ]
+  (e.g., Claude Desktop,  <-->  Exposes tools,   <-->  (e.g., Local Files,
+   Cursor, IDEs)                prompts, & data)        GitHub, PostgreSQL)
+
+- MCP Client: The AI application or interface you interact with. It manages 
+  user permissions and handles the conversational flow.
+- MCP Server: A lightweight script or background process that connects directly 
+  to a tool or database and translates its data into a format the AI understands.
+- Protocol: Communication between the client and server happens securely 
+  using JSON-RPC over local standard input/output (Stdio) or web protocols 
+  like Server-Sent Events (SSE).
+
+3. THE THREE MAIN FEATURES
+---------------------------
+MCP servers provide three core features to help AI models work efficiently:
+
+A. Resources (Data Access)
+   - These are read-only data streams that the AI can look at to get context.
+   - Examples: Reading a local log file, checking a database schema, or 
+     loading documentation.
+   - Identified by clean URIs (e.g., `file:///logs/app.log`).
+
+B. Tools (Action Execution)
+   - These are functions that allow the AI to actively do things.
+   - Examples: Running a SQL query, creating a new file, or sending a Slack 
+     message.
+   - Security Note: Critical tools require the user to click "Approve" before 
+     running.
+
+C. Prompts (Templates)
+   - These are pre-written prompt templates or slash-commands built directly 
+     into the server to help users guide the AI easily.
+   - Example: A `/review-code` prompt that automatically gathers the correct 
+     files for a code review.
+
+4. KEY BENEFITS OF MCP
+----------------------
+- Secure & Local: MCP servers often run completely on your local machine, 
+  meaning sensitive source code or databases don't need to be uploaded to 
+  third-party cloud servers.
+- Highly Flexible: You can mix and match servers. You can run a PostgreSQL 
+  server, a Filesystem server, and a GitHub server all at the same time inside 
+  one AI client.
+- Open Standard: Anyone can build a custom MCP server in Python or TypeScript 
+  to hook up their own private tools.
+
+===============================================================================
+Official Documentation: https://modelcontextprotocol.io
+===============================================================================
