@@ -1,0 +1,57 @@
+========================================================================
+MOBILENETV2: ARCHITECTURE AND OVERVIEW
+========================================================================
+
+1. INTRODUCTION
+---------------
+MobileNetV2 is a highly efficient convolutional neural network (CNN) 
+architecture designed specifically for mobile and resource-constrained 
+devices. Introduced by Google researchers in 2018, it improves upon 
+the original MobileNetV1 by offering higher accuracy while using 
+fewer parameters and computational resources.
+
+2. KEY ARCHITECTURAL INNOVATIONS
+--------------------------------
+MobileNetV2 introduces two primary structural enhancements to standard 
+convolutional layers:
+
+* Inverted Residuals: 
+  Unlike traditional residual blocks (which connect layers with a high 
+  number of channels), MobileNetV2 connects the bottleneck layers 
+  directly. The block expands the input to a higher-dimensional space, 
+  applies a lightweight depthwise convolution, and then projects it 
+  back to a low-dimensional state.
+
+* Linear Bottlenecks: 
+  Non-linear activation functions (like ReLU) can inadvertently 
+  destroy useful information in low-dimensional spaces. To prevent 
+  this, MobileNetV2 removes the non-linearity from the final layer of 
+  each bottleneck block, using a linear activation instead.
+
+3. CORE BUILDING BLOCK: THE SANDWICH STRUCTURE
+----------------------------------------------
+Each building block (Inverted Residual Block) consists of three layers:
+1. 1x1 Convolution with ReLU6 (Expansion phase)
+2. 3x3 Depthwise Convolution with ReLU6 (Filtering phase)
+3. 1x1 Convolution without non-linearity (Linear projection phase)
+
+4. PERFORMANCE & EFFICIENCY BENEFIT
+-----------------------------------
+* Parameter Count: Approx. 3.4 Million parameters (ImageNet version).
+* Computational Complexity: Measured in MAdd (Multiply-Accumulate) 
+  operations, it requires significantly fewer operations compared to 
+  traditional models like VGG or ResNet, making it ideal for edge devices.
+* Versatility: Serves as an excellent backbone for downstream computer 
+  vision tasks such as Object Detection (SSDLite) and Semantic 
+  Segmentation (DeepLabv3).
+
+5. COMMON USE CASES
+-------------------
+* Real-time image classification on mobile apps.
+* On-device object detection (e.g., wildlife monitoring, drone footage).
+* Face mask detection and biometric edge computing.
+* Biomedical image classification under low-power environments.
+
+========================================================================
+EOF - End of File
+========================================================================
