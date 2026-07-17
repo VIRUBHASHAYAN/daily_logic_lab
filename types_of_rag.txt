@@ -1,0 +1,97 @@
+========================================================================
+             A COMPREHENSIVE GUIDE TO RAG ARCHITECTURES
+========================================================================
+
+Retrieval-Augmented Generation (RAG) has evolved from simple document 
+lookup into a sophisticated ecosystem of patterns designed to make Large 
+Language Models (LLMs) more accurate, context-aware, and authoritative.
+
+Below is a breakdown of RAG types categorized by architectural 
+evolution, specialized data formats, and structural approaches.
+
+------------------------------------------------------------------------
+1. BY ARCHITECTURAL EVOLUTION & COMPLEXITY
+------------------------------------------------------------------------
+
+* Naive RAG
+  The earliest, most basic form of RAG. It follows a direct pipeline:
+  - Indexes static documents into a vector database.
+  - Takes the user query to retrieve the most similar text chunks.
+  - Passes these chunks straight to the LLM to generate an answer.
+  Cons: Suffers from low precision (retrieving irrelevant chunks) and 
+        low recall (missing critical information).
+
+* Advanced RAG
+  Introduces sophisticated pre-retrieval and post-retrieval strategies 
+  to fix the limitations of Naive RAG.
+  - Pre-Retrieval: Query rewriting, expansion, and sub-queries to better 
+    match the database index. Better chunking strategies (e.g., sliding 
+    windows).
+  - Post-Retrieval: Reranking models (like Cross-Encoders) to re-order 
+    the fetched chunks based on exact relevance, dropping low-scoring data 
+    before it hits the LLM context window.
+
+* Modular RAG
+  The current industry standard. Instead of a linear pipeline, Modular RAG 
+  uses a highly flexible, component-based architecture. It integrates 
+  specialized modules for structured database querying, web searches, 
+  and iterative reasoning loops.
+
+------------------------------------------------------------------------
+2. BY COGNITIVE BEHAVIOR & INTERACTION
+------------------------------------------------------------------------
+
+* Corrective RAG (CRAG)
+  Adds a lightweight evaluator loop to assess the quality of retrieved 
+  documents. If the retrieved data is deemed irrelevant or incorrect, 
+  the system dynamically switches strategies—such as triggering a web search 
+  to fetch accurate real-time information—before responding.
+
+* Self-RAG (Self-Reflective RAG)
+  Empowers the LLM to critique its own retrieval and generation processes. 
+  Using specialized "reflection tokens," the model decides whether it needs 
+  to retrieve more context, whether the fetched context supports its answer, 
+  and whether the final response is high-quality and factual.
+
+* Agentic RAG
+  Treats RAG as an active workflow managed by autonomous AI agents. Instead 
+  of a hardcoded lookup, an agentic system uses planning logic to decide 
+  *which* data tools to use, *when* to search, and *how* to synthesize 
+  information from disparate, multi-step queries.
+
+------------------------------------------------------------------------
+3. BY DATA MECHANISM & TARGET STORAGE
+------------------------------------------------------------------------
+
+* Vector-Based RAG
+  The standard approach using dense vector embeddings to capture semantic 
+  meaning. Text chunks are transformed into high-dimensional vectors, and 
+  retrieval relies on mathematical similarity (e.g., Cosine Distance).
+
+* Graph RAG (Knowledge Graph RAG)
+  Extracts entities and their explicit relationships from unstructured text 
+  to build a structured knowledge graph. Instead of just pulling text chunks, 
+  it navigates interconnected nodes (e.g., "Company A -> acquired -> Company B"), 
+  making it highly effective for complex, holistic, and reasoning-heavy queries.
+
+* Hybrid RAG
+  Combines the best of both worlds: Keyword-based lexical search (BM25) 
+  for exact phrasing, serial numbers, or acronyms, alongside Vector-based 
+  semantic search for conceptual understanding. Results are blended using 
+  techniques like Reciprocal Rank Fusion (RRF).
+
+------------------------------------------------------------------------
+4. BY SCOPE & USE CASE
+------------------------------------------------------------------------
+
+* Multi-Document RAG
+  Designed to reason across hundreds or thousands of separate files. It 
+  typically employs hierarchical indexing or summaries of documents to routing 
+  queries to the specific files containing the target answers.
+
+* Multimodal RAG
+  Extends the retrieval pipeline beyond plain text. The system can embed, 
+  retrieve, and reason across combinations of text, images, charts, audio, 
+  and embedded tables.
+
+========================================================================
