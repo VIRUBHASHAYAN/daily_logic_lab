@@ -1,0 +1,81 @@
+======================================================================
+                     NETWORK SECURITY OVERVIEW
+======================================================================
+
+1. WHAT IS NETWORK SECURITY?
+----------------------------------------------------------------------
+Network security is a broad term that covers a set of rules, 
+technologies, and processes designed to protect the integrity, 
+confidentiality, and accessibility of computer networks and data. 
+It includes both hardware and software technologies.
+
+The ultimate goal is to prevent unauthorized access, misuse, 
+modification, or denial of a computer network and network-accessible 
+resources.
+
+
+2. THE THREE PILLARS (CIA TRIAD)
+----------------------------------------------------------------------
+Effective network security relies on three core concepts:
+
+* Confidentiality: Ensuring that data is accessible only to those 
+  authorized to have access.
+* Integrity: Safeguarding the accuracy and completeness of data, 
+  ensuring it cannot be modified in transit by unauthorized parties.
+* Availability: Ensuring that authorized users have reliable and 
+  timely access to data and resources when needed.
+
+
+3. COMMON TYPES OF NETWORK SECURITY TOOLS & STRATEGIES
+----------------------------------------------------------------------
+To secure a network, organizations deploy a multi-layered defense system:
+
+* Firewalls: Devices or software that monitor and control incoming 
+  and outgoing network traffic based on predetermined security rules. 
+  They act as a barrier between trusted and untrusted networks.
+
+* Access Control: Defining which users and devices have access to 
+  network applications and systems. This often utilizes Network 
+  Access Control (NAC) to check devices before granting entry.
+
+* Antivirus and Antimalware Software: Tools designed to detect, 
+  prevent, and remove malicious software (like viruses, ransomware, 
+  worms, and spyware) from the network.
+
+* Virtual Private Networks (VPNs): Services that encrypt the 
+  connection from a device to a network over the internet, ensuring 
+  that data transmission remains private and secure.
+
+* Network Segmentation: The practice of splitting a network into 
+  smaller, distinct subnetworks. If a breach occurs in one zone, 
+  the damage is contained and cannot easily spread to others.
+
+* Intrusion Prevention Systems (IPS): Systems that actively scan 
+  network traffic to detect and block attacks in real-time.
+
+
+4. PRIMARY NETWORK THREATS
+----------------------------------------------------------------------
+Security measures are built to defend against various digital threats, 
+including:
+
+* Malware: Malicious software designed to damage or exploit devices.
+* Phishing: Deceptive emails or messages aimed at tricking users 
+  into revealing sensitive information like passwords.
+* Man-in-the-Middle (MitM) Attacks: Where an attacker intercepts 
+  and alters communications between two parties without their knowledge.
+* Distributed Denial of Service (DDoS): An attempt to crash a 
+  server or network by overwhelming it with a flood of internet traffic.
+
+
+5. BEST PRACTICES FOR EVERYDAY SECURITY
+----------------------------------------------------------------------
+* Use Strong Passwords & Multi-Factor Authentication (MFA).
+* Keep all software, operating systems, and firmware updated (patching).
+* Train employees and users regularly to recognize social engineering 
+  and phishing attempts.
+* Back up critical data frequently and store backups securely off-network.
+
+======================================================================
+Document End
+======================================================================
