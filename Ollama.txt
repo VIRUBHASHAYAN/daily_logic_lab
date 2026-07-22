@@ -1,0 +1,63 @@
+===================================================================
+                  OLLAMA LLM MODELS & QUICK GUIDE
+===================================================================
+
+1. POPULAR OLLAMA MODELS
+-------------------------------------------------------------------
+Model Name      Parameters     Best Used For
+-------------------------------------------------------------------
+llama3          8B, 70B        General reasoning, chat, coding
+mistral         7B             Fast response, strong general reasoning
+gemma2          2B, 9B, 27B    Google's lightweight, high-performance model
+phi3            3.8B, 14B      Microsoft's compact, logic-heavy model
+qwen2           0.5B to 72B    Multilingual tasks & code generation
+deepseek-coder  1.3B to 33B    Code completion and software development
+codellama       7B, 13B, 34B   Code generation and refactoring
+llava           7B, 13B        Multimodal tasks (Image + Text analysis)
+nomic-embed-text -             Text embeddings for RAG & search applications
+
+
+2. HARDWARE & RAM REQUIREMENTS
+-------------------------------------------------------------------
+Model Size      Min RAM / VRAM    Recommended Setup
+-------------------------------------------------------------------
+1B - 3B         8 GB RAM          Basic laptop / CPU only
+7B - 8B         16 GB RAM         Dedicated GPU (6GB+ VRAM) or Apple M-series
+13B - 14B       32 GB RAM         Dedicated GPU (12GB+ VRAM)
+33B - 35B       64 GB RAM         Dual GPU or High VRAM
+70B             64 GB - 128 GB    Enterprise GPU / Apple Max/Ultra
+
+
+3. ESSENTIAL OLLAMA COMMANDS
+-------------------------------------------------------------------
+• Run / Download & Chat:
+  ollama run llama3
+
+• Download Model without Running:
+  ollama pull mistral
+
+• List Installed Models:
+  ollama list
+
+• Show Model Info & Architecture:
+  ollama show llama3
+
+• Remove / Delete Model:
+  ollama rm mistral
+
+• Check Running Models:
+  ollama ps
+
+
+4. CUSTOM MODEL SETUP (MODELFILE EXAMPLE)
+-------------------------------------------------------------------
+To customize system prompts or parameters, create a file named 'Modelfile':
+
+  FROM llama3
+  PARAMETER temperature 0.7
+  SYSTEM """You are an expert software architect providing concise code advice."""
+
+Then create the custom model using:
+  ollama create my-assistant -f ./Modelfile
+  ollama run my-assistant
+===================================================================
