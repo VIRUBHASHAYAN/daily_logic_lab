@@ -1,0 +1,102 @@
+================================================================================
+          CONVOLUTIONAL NEURAL NETWORKS (CNNs) IN COMPUTER VISION
+                  Architecture Breakdown & Comparisons
+================================================================================
+
+--------------------------------------------------------------------------------
+1. CLASSIC / HISTORICAL ARCHITECTURES (FOUNDATIONAL)
+--------------------------------------------------------------------------------
+
+[A] LeNet-5 (1998)
+  - Description: The pioneer of modern CNNs, originally built for handwritten 
+    digit recognition (MNIST).
+  - Pros: Extremely lightweight, low computational requirements.
+  - Cons: Very shallow; fails to capture complex features in high-res images.
+  - Current Status: Legacy / Educational use only.
+  - Best Used For: Simple digit/character recognition on tiny datasets.
+
+[B] AlexNet (2012)
+  - Description: Populated deep learning in computer vision by winning ImageNet 2012; 
+    introduced ReLU activations and Dropout.
+  - Pros: Proven capability to learn complex visual features at scale.
+  - Cons: High parameter count, slow training, replaced by more efficient designs.
+  - Current Status: Largely obsolete for production.
+  - Best Used For: Historical benchmark comparisons and teaching fundamentals.
+
+[C] VGG (VGG16 / VGG19) (2014)
+  - Description: Introduced tiny (3x3) stacked filters to build very deep networks with uniform design.
+  - Pros: Highly uniform, easy to understand, excellent transfer learning capabilities.
+  - Cons: Extremely heavy parameter count (138M+), high memory footprint.
+  - Current Status: Deprecated for edge, occasionally used as feature extractors (e.g., style transfer).
+  - Best Used For: Perceptual loss functions, style transfer, and introductory feature extraction.
+
+
+--------------------------------------------------------------------------------
+2. MODERN WORKHORSE ARCHITECTURES (STANDARD INDUSTRY DEPLOYMENT)
+--------------------------------------------------------------------------------
+
+[A] ResNet (Residual Networks - ResNet-18, ResNet-50, ResNet-152)
+  - Description: Introduced "skip connections" (residual learning) to solve the vanishing gradient problem in deep networks.
+  - Pros: Solved depth scaling, easy to train, stable, strong performance across many tasks.
+  - Cons: High memory usage in deeper variants (ResNet-152); lacks multi-scale pooling natively.
+  - Current Status: Industry standard default baseline.
+  - Best Used For: General image classification, backbone for object detectors (Faster R-CNN), and medical image analysis.
+
+[B] Inception / GoogLeNet (Inception-v3, Inception-v4)
+  - Description: Uses parallel convolutional filters of different sizes (1x1, 3x3, 5x5) within the same block to capture multi-scale features.
+  - Pros: High performance with fewer parameters than VGG; excellent multi-scale representation.
+  - Cons: Complex architecture, difficult to customize or tune.
+  - Current Status: Active, though often superseded by modern hybrid backbones.
+  - Best Used For: Fine-grained visual categorization and high-accuracy classification tasks.
+
+[C] EfficientNet (B0 through B7, EfficientNetV2)
+  - Description: Uses Compound Scaling to balance network depth, width, and resolution simultaneously.
+  - Pros: Superior accuracy-to-parameter ratio; highly customizable compute tiers.
+  - Cons: Complex training regime; can be slower on GPUs without optimized depthwise conv support.
+  - Current Status: Dominant choice for state-of-the-art vision backbones when Transformers aren't used.
+  - Best Used For: High-accuracy applications operating under strict parameter budgets.
+
+
+--------------------------------------------------------------------------------
+3. EFFICIENT & LIGHTWEIGHT ARCHITECTURES (MOBILE & EDGE DEVICES)
+--------------------------------------------------------------------------------
+
+[A] MobileNet (V1, V2, V3)
+  - Description: Utilizes Depthwise Separable Convolutions to drastically reduce FLOPs and parameter size.
+  - Pros: Extremely fast execution, low memory usage, optimized for ARM/mobile hardware.
+  - Cons: Slightly lower accuracy compared to heavy backbones like ResNet-50.
+  - Current Status: Highly active standard for mobile, IoT, and embedded devices.
+  - Best Used For: Mobile apps, edge computing, real-time video processing on smartphones or microcontrollers.
+
+[B] ShuffleNet (V1, V2)
+  - Description: Uses group convolutions and a "channel shuffle" operation to maintain information flow across groups.
+  - Pros: Optimized specifically for real-world hardware speed, faster than MobileNet on certain platforms.
+  - Cons: Slightly harder to implement and train custom variations.
+  - Current Status: Active in low-power embedded systems.
+  - Best Used For: Low-latency robotics, edge sensors, and ultra-lightweight deployments.
+
+
+--------------------------------------------------------------------------------
+4. MODERN CNN & TRANSFORMER HYBRIDS
+--------------------------------------------------------------------------------
+
+[A] ConvNeXt (2022)
+  - Description: Modernizes pure CNNs using design principles borrowed from Vision Transformers (Swin Transformer) like inverted bottlenecks and 7x7 depthwise convs.
+  - Pros: Retains CNN efficiency and fast inference while matching or beating Vision Transformer (ViT) accuracy.
+  - Cons: Requires large pre-training datasets to reach full potential.
+  - Current Status: Cutting-edge pure-CNN option widely adopted in modern vision pipelines.
+  - Best Used For: High-performance visual perception tasks where standard Vision Transformers are too slow or compute-heavy.
+
+
+--------------------------------------------------------------------------------
+5. QUICK SELECTION REFERENCE MATRIX
+--------------------------------------------------------------------------------
+
+Use Case                             Recommended Architecture
+--------------------------------------------------------------------------------
+Mobile / Embedded Apps               MobileNetV3, ShuffleNetV2
+Industry Production Baseline          ResNet-50
+Maximum Accuracy (Pure CNN)          EfficientNetV2, ConvNeXt
+Feature Extractor / Style Transfer   VGG-16, ResNet-34
+Resource-Constrained IoT             MobileNetV2
+================================================================================
