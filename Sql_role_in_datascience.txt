@@ -1,0 +1,132 @@
+================================================================================
+                        SQL FOR DATA SCIENCE: REFERENCE GUIDE
+================================================================================
+
+1. OVERVIEW & IMPORTANCE
+--------------------------------------------------------------------------------
+Structured Query Language (SQL) is the foundational language for querying, 
+extracting, and manipulating data stored in Relational Database Management 
+Systems (RDBMS). 
+
+In Data Science, SQL serves as the first step in the data pipeline:
+  • Data Extraction: Pulling relevant raw datasets from data warehouses (Snowflake, BigQuery, Redshift, Postgres).
+  • Data Cleaning & Preprocessing: Filtering outliers, handling NULLs, and reformatting fields directly at the database level.
+  • Feature Engineering: Creating aggregations, rolling averages, and customer metrics before loading into Python or R for modeling.
+
+--------------------------------------------------------------------------------
+2. ESSENTIAL SQL CONCEPTS FOR DATA SCIENCE
+--------------------------------------------------------------------------------
+
+A. DATA RETRIEVAL & FILTERING
+-----------------------------
+• SELECT: Specifies columns to retrieve.
+• DISTINCT: Removes duplicates.
+• WHERE: Filters rows based on conditions.
+• LIKE / ILIKE: Pattern matching using wildcards (% and _).
+• IN / BETWEEN: Filters within lists or continuous ranges.
+
+Example:
+  SELECT DISTINCT customer_id, location 
+  FROM users 
+  WHERE status = 'active' 
+    AND registration_date BETWEEN '2024-01-01' AND '2024-06-30';
+
+
+B. AGGREGATIONS & GROUPING
+--------------------------
+Summarizes data into granular metrics (e.g., daily active users, average order value).
+
+• Aggregate Functions: COUNT(), SUM(), AVG(), MIN(), MAX()
+• GROUP BY: Groups rows sharing a property.
+• HAVING: Filters aggregated results (unlike WHERE, which filters rows before aggregation).
+
+Example:
+  SELECT category, COUNT(order_id) AS total_orders, AVG(amount) AS avg_spend
+  FROM transactions
+  GROUP BY category
+  HAVING COUNT(order_id) > 100;
+
+
+C. JOINS & DATA MERGING
+-----------------------
+Combines data across multiple tables based on related key columns.
+
+• INNER JOIN: Returns rows with matching keys in both tables.
+• LEFT JOIN: Keeps all rows from the left table, and matched rows from the right (returns NULL if no match).
+• RIGHT / FULL OUTER JOIN: Keeps all right or all rows from both tables.
+
+Example:
+  SELECT u.user_id, u.email, o.order_date, o.total_amount
+  FROM users u
+  LEFT JOIN orders o ON u.user_id = o.user_id;
+
+
+D. WINDOW FUNCTIONS (CRITICAL FOR INTERVIEWS & ADVANCED ANALYSIS)
+-----------------------------------------------------------------
+Performs calculations across a set of table rows related to the current row, without collapsing rows like GROUP BY.
+
+• OVER (PARTITION BY ... ORDER BY ...): Defines the frame/window.
+• ROW_NUMBER(): Assigns a unique sequential integer.
+• RANK() / DENSE_RANK(): Ranks items within a partition.
+• LAG() / LEAD(): Fetches values from preceding or succeeding rows (great for time-series / trend calculations).
+
+Example (3-day rolling average):
+  SELECT order_date, total_amount,
+         AVG(total_amount) OVER (
+           ORDER BY order_date 
+           ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
+         ) AS rolling_3day_avg
+  FROM daily_sales;
+
+
+E. CTEs (COMMON TABLE EXPRESSIONS) & SUBQUERIES
+------------------------------------------------
+Improves query readability and breaks complex multi-step transformations into modular pieces.
+
+Example:
+  WITH high_value_users AS (
+      SELECT user_id, SUM(amount) AS total_spend
+      FROM transactions
+      GROUP BY user_id
+      HAVING SUM(amount) > 1000
+  )
+  SELECT u.user_id, u.email, h.total_spend
+  FROM high_value_users h
+  JOIN users u ON h.user_id = u.user_id;
+
+
+F. DATA CLEANING & CONDITIONAL LOGIC
+------------------------------------
+• COALESCE(val1, val2): Replaces NULL with a default value.
+• CASE WHEN ... THEN ... ELSE ... END: If/Else conditional logic inside queries.
+• CAST() / :: : Converts data types (e.g., string to integer or timestamp).
+
+Example:
+  SELECT order_id,
+         COALESCE(shipping_fee, 0) AS shipping_fee,
+         CASE 
+             WHEN amount >= 500 THEN 'High Value'
+             WHEN amount >= 100 THEN 'Medium Value'
+             ELSE 'Low Value'
+         END AS customer_tier
+  FROM orders;
+
+--------------------------------------------------------------------------------
+3. SQL INTEGRATION IN THE DATA SCIENCE WORKFLOW
+--------------------------------------------------------------------------------
+
+1. Database Connection (Python / Pandas):
+   Data scientists frequently run SQL queries directly inside Python scripts using libraries like `SQLAlchemy`, `psycopg2`, or `pandas.read_sql()`.
+
+   Python Example:
+     import pandas as pd
+     import sqlite3
+
+     conn = sqlite3.connect('database.db')
+     query = "SELECT user_id, amount FROM transactions WHERE amount > 50;"
+     df = pd.read_sql_query(query, conn)
+
+2. ETL & Data Pipelines:
+   Tools like dbt (data build tool), Airflow, and Apache Spark SQL use standard SQL to schedule automated data transformation pipelines before machine learning ingestion.
+
+================================================================================
