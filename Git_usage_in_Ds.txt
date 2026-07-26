@@ -1,0 +1,105 @@
+================================================================================
+                    GITHUB USAGE IN DATA SCIENCE: A PRACTICAL GUIDE
+================================================================================
+
+1. OVERVIEW
+--------------------------------------------------------------------------------
+GitHub is an essential platform for data scientists, serving as a hub for 
+version control, collaboration, code sharing, and portfolio building. While 
+traditionally used for software development, GitHub adapts specifically to data 
+science workflows involving Jupyter Notebooks, datasets, and ML pipelines.
+
+
+2. CORE USE CASES IN DATA SCIENCE
+--------------------------------------------------------------------------------
+A. Version Control for Code & Models
+   - Track changes in data processing scripts (.py), notebooks (.ipynb), and
+     model training pipelines over time.
+   - Revert back to earlier states when model performance regresses.
+
+B. Collaboration & Peer Review
+   - Work in parallel with other data scientists, engineers, and analysts using
+     feature branches.
+   - Conduct code reviews on Pull Requests (PRs) to ensure data transformations
+     and model logic are accurate.
+
+C. Portfolio Building
+   - Showcase completed data analysis, visualization, and machine learning 
+     projects to recruiters and potential employers.
+   - Display end-to-end projects with clear documentation and interactive outputs.
+
+D. MLOps & Automation (GitHub Actions)
+   - Automate model retraining, unit testing (e.g., testing data quality with
+     great_expectations or pytest), and deployment.
+   - Automate execution of Jupyter Notebooks on scheduled triggers.
+
+
+3. RECOMMENDED DATA SCIENCE REPOSITORY STRUCTURE
+--------------------------------------------------------------------------------
+To keep data science projects organized and reproducible, follow a structured 
+layout such as standard Cookiecutter Data Science:
+
+project-name/
+│
+├── README.md              <- Main documentation, setup instructions, & summary
+├── LICENSE                <- Open-source license terms
+├── .gitignore             <- Files to ignore (e.g., data, large models, keys)
+├── requirements.txt       <- Python dependencies (e.g., pandas, scikit-learn)
+│
+├── data/                  <- NOTE: Usually excluded from git tracking
+│   ├── raw/               <- Original, immutable raw data
+│   ├── processed/         <- Data cleaned for analysis and modeling
+│
+├── notebooks/             <- Jupyter notebooks (numbered chronologically)
+│   ├── 1.0-eda.ipynb
+│   └── 2.0-model-training.ipynb
+│
+├── src/                   <- Source code for use in this project
+│   ├── __init__.py
+│   ├── data_prep.py       <- Scripts to fetch/clean data
+│   └── train_model.py     <- Model training scripts
+│
+└── models/                <- Trained model artifacts (tracked via DVC, not Git)
+
+
+4. BEST PRACTICES FOR DATA SCIENCE ON GITHUB
+--------------------------------------------------------------------------------
+1. Never Commit Sensitive Information
+   - Use .gitignore to keep API keys, credentials, and raw datasets out of git.
+   - Avoid committing large files (.csv, .pqt, .bin, .h5, .pkl).
+
+2. Use Data Version Control (DVC)
+   - Git is built for code, not multi-gigabyte datasets or heavy model files.
+   - Pair Git with DVC (Data Version Control) to track datasets in remote storage 
+     (S3, GCS, Azure Blob) while keeping metadata pointers in Git.
+
+3. Clean Jupyter Notebooks Before Committing
+   - Clear outputs before pushing if they contain confidential data or large 
+     visualizations that bloat the repository file size.
+   - Tools like `nbstripout` can automate output removal prior to commits.
+
+4. Write a Clear README
+   - Include:
+     * Problem statement and project goals.
+     * Dataset sources and descriptions.
+     * Setup instructions (environment installation, usage).
+     * Key findings, model performance metrics, and visual summary charts.
+
+
+5. COMMON GIT COMMANDS CHEAT SHEET
+--------------------------------------------------------------------------------
+# Clone a repository locally
+git clone <repository-url>
+
+# Create and switch to a new working branch
+git checkout -b feature/eda-analysis
+
+# Stage modified files
+git add notebooks/1.0-eda.ipynb
+
+# Commit staged changes with a descriptive message
+git commit -m "Add initial exploratory data analysis on sales dataset"
+
+# Push changes to remote repository
+git push origin feature/eda-analysis
+================================================================================
