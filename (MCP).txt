@@ -1,0 +1,64 @@
+================================================================================
+                    MODEL CONTEXT PROTOCOL (MCP) - OVERVIEW
+================================================================================
+
+1. WHAT IS MCP?
+--------------------------------------------------------------------------------
+The Model Context Protocol (MCP) is an open standard designed to connect AI 
+models (such as Large Language Models and AI agents) directly to local and remote 
+data sources, tools, and services in a secure, standardized way.
+
+Developed by Anthropic and released as an open-source project, MCP acts as a 
+universal interface between AI applications (clients) and data systems (servers).
+
+
+2. WHY IS MCP NEEDED? (THE PROBLEM IT SOLVES)
+--------------------------------------------------------------------------------
+Before MCP:
+- Custom integration code had to be written for every combination of AI client 
+  and data source (e.g., connecting Client A to Postgres, Client B to GitHub).
+- Developers faced an M×N integration complexity problem (M AI tools × N data sources).
+- Fragmented security models and redundant APIs created maintenance overhead.
+
+With MCP:
+- AI clients implement one standard protocol (MCP Client).
+- Data sources expose one standard interface (MCP Server).
+- The ecosystem achieves 1×1 standard compatibility, allowing seamless interoperability.
+
+
+3. CORE ARCHITECTURE & PRIMITIVES
+--------------------------------------------------------------------------------
+MCP follows a Client-Server model:
+
+- MCP Client: The application running the AI model (e.g., Claude Desktop, IDEs, 
+  custom agent frameworks) that requests data or actions.
+- MCP Server: Lightweight background programs that expose tools, resources, 
+  and prompts from underlying data sources (e.g., databases, APIs, local filesystems).
+
+The protocol standardizes three primary primitives:
+  a) Resources: File-like data read by the AI (e.g., local files, database records, API responses).
+  b) Tools: Executable functions invoked by the AI (e.g., running shell commands, calling APIs).
+  c) Prompts: Pre-defined prompt templates provided by servers to guide user/AI interaction.
+
+
+4. KEY ADVANTAGES & FEATURES
+--------------------------------------------------------------------------------
+- Interoperability: Mix-and-match AI tools and data sources effortlessly.
+- Security: Keeps sensitive data local. The server explicitly exposes only designated primitives.
+- Extensibility: Easy to write custom servers in Python, TypeScript, and other languages.
+- Real-Time Updates: Supports notification hooks when resources or states change.
+
+
+5. EXAMPLE USE CASES
+--------------------------------------------------------------------------------
+- IDE Integration: Giving an AI coding agent direct read/write access to a git repository 
+  or database schema safely.
+- Local File Management: Allowing desktop AI models to search local directories and documents.
+- SaaS Integration: Interacting directly with Slack, Jira, GitHub, or Postgres without custom API wrappers.
+
+
+6. SUMMARY
+--------------------------------------------------------------------------------
+MCP aims to be for AI data integration what USB was for hardware peripherals, or HTTP 
+was for the web—a foundational standard enabling AI applications to interact with the world contextually and securely.
+================================================================================
