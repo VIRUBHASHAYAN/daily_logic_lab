@@ -1,0 +1,118 @@
+================================================================================
+                       SATELLITE DATASET ACCESS GUIDE
+================================================================================
+
+1. MAJOR OPEN-ACCESS SATELLITE DATA PLATFORMS
+--------------------------------------------------------------------------------
+
+* NASA Earthdata
+  - Description: Provides free access to Earth science data from NASA's Earth
+    Observing System Data and Information System (EOSDIS).
+  - Key Datasets: MODIS, VIIRS, Landsat (jointly with USGS), ASTER, SMAP.
+  - Access Point: https://search.earthdata.nasa.gov/
+
+* Copernicus Data Space Ecosystem (European Space Agency - ESA)
+  - Description: The main portal for Sentinel satellite imagery and Copernicus
+    services.
+  - Key Datasets:
+    - Sentinel-1 (C-band SAR, radar imagery)
+    - Sentinel-2 (Multispectral optical imagery, 10m-60m resolution)
+    - Sentinel-3 (Ocean & land color, temperature)
+    - Sentinel-5P (Air quality & atmospheric monitoring)
+  - Access Point: https://dataspace.copernicus.eu/
+
+* USGS EarthExplorer
+  - Description: U.S. Geological Survey platform providing access to aerial,
+    satellite, and land cover data.
+  - Key Datasets: Complete Landsat archive (Landsat 1 through 9), SRTM DEMs,
+    AVHRR.
+  - Access Point: https://earthexplorer.usgs.gov/
+
+* Microsoft Planetary Computer
+  - Description: A cloud platform providing open spatial datasets formatted as
+    Cloud-Optimized GeoTIFFs (COG) with STAC APIs for fast querying.
+  - Key Datasets: Sentinel-2 2A, Landsat 8/9, NAIP, ERA5 climate reanalysis,
+    Demographics, Land Cover.
+  - Access Point: https://planetarycomputer.microsoft.com/
+
+* Google Earth Engine (GEE) Catalog
+  - Description: Petabyte-scale catalog of public satellite imagery and geospatial
+    datasets hosted on Google Cloud with an interactive analysis API.
+  - Key Datasets: Landsat, Sentinel, MODIS, TRMM/GPM, Population datasets, DEMs.
+  - Access Point: https://earthengine.google.com/
+
+
+2. OPEN DATA ON CLOUD INFRASTRUCTURE (AWS & GOOGLE CLOUD)
+--------------------------------------------------------------------------------
+
+* AWS Registry of Open Data
+  - Hosting open satellite data directly in S3 buckets in Cloud-Optimized formats.
+  - Notable buckets:
+    - Sentinel-2 on AWS (Element 84 STAC)
+    - Landsat on AWS
+    - NOAA GOES-16 / GOES-18 weather imagery
+  - URL: https://registry.opendata.aws/
+
+* Google Cloud Public Datasets
+  - Satellite imagery hosted in Google Cloud Storage buckets for high-speed batch
+    processing.
+  - URL: https://cloud.google.com/public-datasets
+
+
+3. COMMERCIAL & HIGH-RESOLUTION PROVIDERS
+--------------------------------------------------------------------------------
+
+* Planet Labs
+  - Data: Daily global coverage with high-resolution constellation (PlanetScope ~3m,
+    SkySat ~50cm).
+  - Programs: Offers academic research licenses and education programs.
+  - Portal: https://www.planet.com/
+
+* Maxar Technologies
+  - Data: Very high-resolution optical imagery (WorldView-1/2/3/4, Legion down to ~30cm).
+  - Portal: https://www.maxar.com/
+
+* Airbus Defence and Space
+  - Data: Pléiades Neo, SPOT 6/7, TerraSAR-X.
+  - Portal: https://www.intelligence-airbusds.com/
+
+
+4. APIs AND PROGRAMMATIC ACCESS TOOLS
+--------------------------------------------------------------------------------
+
+* SpatioTemporal Asset Catalog (STAC)
+  - A standard specification for describing geospatial metadata.
+  - Library: pystac_client (Python)
+  - Example Python snippet using STAC:
+    ```
+    from pystac_client import Client
+    catalog = Client.open("[https://planetarycomputer.microsoft.com/api/stac/v1](https://planetarycomputer.microsoft.com/api/stac/v1)")
+    search = catalog.search(
+        collections=["sentinel-2-l2a"],
+        bbox=[-122.33, 47.60, -122.20, 47.65],
+        datetime="2023-06-01/2023-06-30"
+    )
+    items = search.item_collection()
+    ```
+
+* Copernicus Sentinel Hub / EUMETSAT APIs
+  - RESTful APIs for querying, filtering, and streaming Sentinel imagery products.
+
+* Google Earth Engine API
+  - Python (`earthengine-api`) and JavaScript client libraries for server-side processing.
+
+* Essential Python Libraries for Handling Satellite Data:
+  - `pystac_client`  : STAC catalog querying
+  - `rasterio`       : Reading, writing, and transforming raster geospatial datasets
+  - `rioxarray`      : Multidimensional raster data analysis (Xarray extension)
+  - `geopandas`      : Vector data analysis
+  - `sentinelsat`    : (Legacy) Downloading Sentinel data directly from Copernicus
+
+
+5. SUMMARY OF KEY FORMATS
+--------------------------------------------------------------------------------
+- COG (Cloud-Optimized GeoTIFF): Standard raster format allowing partial HTTP reads.
+- NetCDF / HDF5: Standard for atmospheric, oceanographic, and climate datasets.
+- GeoJSON / Shapefile: Used for spatial boundaries, vector overlays, and AOIs.
+- STAC JSON: Standard format for querying metadata over web endpoints.
+================================================================================
