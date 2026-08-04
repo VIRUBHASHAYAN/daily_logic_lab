@@ -1,0 +1,95 @@
+================================================================================
+                     IT SERVICE DESK & CUSTOMER HANDLING SOP
+================================================================================
+Document Name : Customer_handle_in_IT.txt
+Target Audience: Helpdesk Technicians, IT Support Engineers, Service Desk Leads
+Objective    : Standard Operating Procedures & Best Practices for IT Support
+
+--------------------------------------------------------------------------------
+1. CORE COMMUNICATION PRINCIPLES
+--------------------------------------------------------------------------------
+- Active Listening: Let the user finish explaining their issue before responding.
+  Never interrupt, even if you know the answer immediately.
+- Translate Technical Jargon: Speak in clear, non-technical terms. 
+  Example: Instead of "Clear your DNS cache and renew your DHCP lease," 
+  say "We need to reset your computer's network connection."
+- Empathy First: Acknowledge the user's frustration before technical troubleshooting.
+  Example: "I understand how crucial this presentation is, and I'll help you get 
+  access to this folder right away."
+- Ownership & Accountability: Take responsibility for the ticket. Avoid using 
+  phrases like "That's not my job" or "The network team messed up."
+
+--------------------------------------------------------------------------------
+2. STEP-BY-STEP TICKET & CALL HANDLING PROCESS
+--------------------------------------------------------------------------------
+Step 1: Greeting & Identification
+  - Greet the user professionally.
+  - Verify identity (Name, Employee ID, Department, Contact Number).
+  - Record the machine name/asset ID.
+
+Step 2: Issue Discovery & Categorization
+  - Ask open-ended questions: "What error message are you seeing?"
+  - Ask targeted questions: "When did this issue start?" / "Is anyone else affected?"
+  - Categorize priority: Critical (P1), High (P2), Medium (P3), Low (P4).
+
+Step 3: Troubleshooting & Communication
+  - Explain what steps you are taking before performing actions (especially when 
+    using Remote Desktop software like TeamViewer, AnyDesk, or Bomgar).
+  - Keep the user engaged if a scan or install takes time.
+
+Step 4: Verification & Resolution
+  - Have the user test the solution themselves before closing the call/ticket.
+  - Ask: "Is everything working as expected now?"
+
+Step 5: Documentation & Closure
+  - Log clear summary notes in the ITSM tool (ServiceNow, Jira, Zendesk, etc.):
+    * Symptom reported
+    * Root cause
+    * Resolution steps taken
+  - Send a formal ticket closure notification.
+
+--------------------------------------------------------------------------------
+3. MANAGING IRATE OR DIFFICULT CUSTOMERS
+--------------------------------------------------------------------------------
+Technique: The HEAT Model
+  - H (Hear): Allow the customer to vent without interruption.
+  - E (Empathize): Validate their emotional state. ("I completely understand why 
+    this delay is frustrating.")
+  - A (Acknowledge): Reiterate the issue to show comprehension. ("So to confirm, 
+    you cannot log into the financial portal before the 5 PM deadline.")
+  - T (Take Action): Outline the immediate action plan with clear deadlines.
+
+De-escalation Rules:
+  - Stay calm and maintain a neutral, steady voice tone.
+  - Do not take attacks personally—the user is frustrated at the system, not you.
+  - Never argue or prove the user wrong in an aggressive manner.
+  - If a user becomes verbally abusive, follow protocol:
+    1. Issue a calm warning: "I want to help you, but I need us to keep this conversation professional."
+    2. If abuse continues, escalate to your direct supervisor according to company policy.
+
+--------------------------------------------------------------------------------
+4. EMAIL & TICKET WRITING BEST PRACTICES
+--------------------------------------------------------------------------------
+- Always include Ticket ID in the subject line (e.g., [INC-104928]).
+- Keep instructions numbered and easy to follow.
+- Use screenshots with highlights/arrows whenever possible.
+- Set clear SLAs (Service Level Agreements) for updates.
+  Bad: "We will fix it soon."
+  Good: "Our L2 team is investigating. I will update you by 2:00 PM EST."
+
+--------------------------------------------------------------------------------
+5. QUICK DO'S AND DON'TS
+--------------------------------------------------------------------------------
+DO:
+  [+] Set realistic expectations—under-promise and over-deliver.
+  [+] Keep the customer updated regularly on long-running incidents.
+  [+] Double-check ticket notes for typos before submitting.
+
+DON'T:
+  [-] Don't use negative phrasing ("You can't do that" -> "Here is how we can do that").
+  [-] Don't leave a remote session without informing the user.
+  [-] Don't assume the user's technical level—adapt to each individual.
+
+================================================================================
+End of Document
+================================================================================
