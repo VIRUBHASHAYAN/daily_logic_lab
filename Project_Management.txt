@@ -1,0 +1,80 @@
+================================================================================
+                        PROJECT MANAGEMENT OVERVIEW
+================================================================================
+
+1. WHAT IS PROJECT MANAGEMENT?
+--------------------------------------------------------------------------------
+Project management is the application of knowledge, skills, tools, and 
+techniques to project activities to meet the project requirements. A project 
+is a temporary endeavor undertaken to create a unique product, service, or 
+result.
+
+2. THE TRIPLE CONSTRAINT (IRON TRIANGLE)
+--------------------------------------------------------------------------------
+Every project is governed by three primary constraints:
+* Scope: What work needs to be done?
+* Time: How long will it take?
+* Cost: What is the budget?
+* Quality: Positioned at the center; affected by changes in scope, time, or cost.
+
+3. THE 5 PROJECT MANAGEMENT PROCESS GROUPS (PMI STANDARD)
+--------------------------------------------------------------------------------
+1. Initiation
+   - Define project goals and scope.
+   - Develop the Project Charter.
+   - Identify key stakeholders.
+   - Obtain formal authorization.
+
+2. Planning
+   - Define detailed scope and deliverables (WBS - Work Breakdown Structure).
+   - Create schedules (Gantt charts, critical path method).
+   - Allocate resources and set the budget.
+   - Develop risk management, communication, and quality plans.
+
+3. Execution
+   - Direct and manage project work.
+   - Coordinate team members and resources.
+   - Execute the project plan to build deliverables.
+
+4. Monitoring & Controlling
+   - Track progress and performance against the plan (KPIs).
+   - Manage changes to scope, timeline, or budget (Change Control).
+   - Ensure quality control and risk mitigation.
+
+5. Closing
+   - Finalize all activities and deliver the final product.
+   - Gain formal acceptance from the client/stakeholders.
+   - Conduct a "Lessons Learned" review.
+   - Release project resources.
+
+4. POPULAR PROJECT MANAGEMENT METHODOLOGIES
+--------------------------------------------------------------------------------
+* Waterfall: Linear and sequential framework where each phase must be 
+  completed before the next begins. Ideal for clear, fixed requirements.
+* Agile: Iterative approach focusing on continuous feedback, flexibility, 
+  and incremental delivery.
+* Scrum: A popular Agile framework using short development cycles called "Sprints" 
+  (usually 2–4 weeks).
+* Kanban: A visual method focused on workflow management and limiting 
+  Work In Progress (WIP).
+* Lean: Focused on maximizing customer value while minimizing waste.
+* PRINCE2: A structured, process-based methodology widely used in Europe and 
+  government sectors.
+
+5. KEY ROLES & RESPONSIBILITIES
+--------------------------------------------------------------------------------
+* Project Manager (PM): Responsible for leading the project from inception to 
+  completion, managing constraints, and keeping stakeholders informed.
+* Project Sponsor: Provides funding, executive support, and strategic direction.
+* Project Team: Executes the daily tasks and produces deliverables.
+* Stakeholders: Anyone impacted by or interested in the project outcome.
+
+6. ESSENTIAL PROJECT MANAGEMENT TOOLS
+--------------------------------------------------------------------------------
+* Communication & Collaboration: Slack, Microsoft Teams, Zoom
+* Task & Work Tracking: Jira, Asana, Trello, Monday.com, ClickUp
+* Scheduling & Planning: Microsoft Project, Smartsheet, Primavera P6
+
+================================================================================
+                                END OF FILE
+================================================================================
