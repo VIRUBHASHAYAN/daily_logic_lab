@@ -1,0 +1,76 @@
+================================================================================
+                           R-CNN OVERVIEW & REFERENCE
+================================================================================
+
+1. WHAT IS R-CNN?
+-----------------
+R-CNN (Region-based Convolutional Neural Network) is a pioneering deep learning 
+architecture introduced by Ross Girshick et al. in 2014. It brought deep 
+convolutional networks into object detection, significantly improving accuracy 
+compared to traditional computer vision approaches like HOG (Histogram of Oriented 
+Gradients) and Haar cascades.
+
+2. HOW R-CNN WORKS (4-STEP PIPELINE)
+------------------------------------
+1. Region Proposal Generation:
+   Uses an external algorithm called "Selective Search" to propose approximately 
+   2,000 region proposals (candidate object bounding boxes) per image.
+
+2. Feature Extraction:
+   Warp each proposed region to a fixed square size (e.g., 227x227) and pass it 
+   individually through a Deep Convolutional Neural Network (such as AlexNet) 
+   to extract a feature vector.
+
+3. Classification:
+   Pass the feature vector into class-specific Linear Support Vector Machines 
+   (SVMs) to classify the presence of an object within that proposed region.
+
+4. Bounding Box Regression:
+   Apply a linear regression model to refine and adjust the bounding box 
+   coordinates to better fit the ground-truth boundaries.
+
+3. EVOLUTION OF THE R-CNN FAMILY
+--------------------------------
+The original R-CNN had major computational drawbacks, leading to improved iterations:
+
+- R-CNN (2014):
+  Processes ~2,000 proposals individually through CNN. Slow training and inference 
+  (~47s per image).
+
+- Fast R-CNN (2015):
+  Passes the whole image once through CNN to create a feature map. Uses Region 
+  of Interest (RoI) Pooling to extract features for proposed regions. Combines 
+  classification and box regression into a single multi-task loss. (~2s per image).
+
+- Faster R-CNN (2015):
+  Replaces external Selective Search with a Region Proposal Network (RPN) integrated 
+  directly into the network. Enables end-to-end trainable object detection (~0.2s 
+  or 5 FPS).
+
+- Mask R-CNN (2017):
+  Extends Faster R-CNN by adding a branch for predicting pixel-level segmentation 
+  masks, enabling instance segmentation.
+
+4. COMPARISON MATRIX
+--------------------
+Feature              R-CNN          Fast R-CNN     Faster R-CNN
+---------------------------------------------------------------
+Region Proposal      Selective      Selective      Region Proposal
+                     Search         Search         Network (RPN)
+CNN Forward Passes   ~2000 / image  1 / image      1 / image
+End-to-End Training  No             No             Yes
+Inference Speed      ~47 seconds    ~2.3 seconds   ~0.2 seconds (5 FPS)
+Storage Requirement  Extremely high Medium         Low
+
+5. ADVANTAGES & LIMITATIONS OF ORIGINAL R-CNN
+---------------------------------------------
+Advantages:
+- Historical milestone that proved CNN power in multi-object localization.
+- High accuracy compared to classical computer vision algorithms at the time.
+
+Limitations:
+- Slow Training: Feature extraction for 2,000 regions per image required days.
+- Huge Disk Space: Extracted features needed to be stored on disk before SVM training.
+- Slow Inference: Not suitable for real-time applications (nearly 1 minute per frame).
+- Not End-to-End: CNN, SVMs, and bounding box regressors were trained separately.
+================================================================================
