@@ -1,0 +1,122 @@
+================================================================================
+                    PROJECT MANAGEMENT FRAMEWORKS GUIDE
+================================================================================
+
+1. INTRODUCTION TO PROJECT MANAGEMENT FRAMEWORKS
+--------------------------------------------------------------------------------
+A project management framework is a structured set of guidelines, processes, 
+and best practices designed to plan, execute, manage, and deliver projects 
+efficiently. 
+
+Choosing the right framework depends on team size, project complexity, 
+industry requirements, stakeholder involvement, and predictability.
+
+
+2. TRADITIONAL & SEQUENTIAL FRAMEWORKS
+--------------------------------------------------------------------------------
+Ideal for projects with well-defined requirements, predictable outcomes, and 
+strict regulatory or compliance demands.
+
+A. WATERFALL
+   - Overview: A linear, phase-by-phase approach where each phase (Requirements, 
+     Design, Implementation, Testing, Deployment, Maintenance) must be completed 
+     before the next begins.
+   - Best For: Construction, hardware manufacturing, enterprise software with 
+     fixed requirements.
+   - Pros: Clear documentation, predictable milestones, easy to understand.
+   - Cons: Inflexible; difficult and expensive to accommodate late changes.
+
+B. PRINCE2 (Projects IN Controlled Environments)
+   - Overview: A process-based framework widely used in the UK and internationally. 
+     Focuses on organization, management, and control throughout the project lifecycle.
+   - Key Principles: Continued business justification, defined roles/responsibilities, 
+     management by stages, management by exception.
+   - Best For: Government projects, large enterprise initiatives.
+   - Pros: Standardized, clear accountability, business-case driven.
+   - Cons: Can require heavy documentation and administrative overhead.
+
+C. CPM (CRITICAL PATH METHOD)
+   - Overview: A step-by-step technique for process planning that defines critical 
+     and non-critical tasks with the goal of preventing timelines and bottlenecks.
+   - Best For: Complex multi-dependent projects like engineering and infrastructure.
+
+
+3. AGILE & ITERATIVE FRAMEWORKS
+--------------------------------------------------------------------------------
+Ideal for fast-paced, high-uncertainty environments where flexible response to 
+change is critical.
+
+A. SCRUM
+   - Overview: An iterative framework based on short work cycles called "Sprints" 
+     (typically 1 to 4 weeks long).
+   - Core Roles: Product Owner, Scrum Master, Development Team.
+   - Key Events: Sprint Planning, Daily Standup, Sprint Review, Sprint Retrospective.
+   - Best For: Software development, product design, creative agencies.
+   - Pros: Fast delivery cycles, continuous feedback, highly adaptable.
+   - Cons: Scope creep if not well-managed; requires experienced team discipline.
+
+B. KANBAN
+   - Overview: A visual workflow management method focused on continuous delivery 
+     and limiting Work-in-Progress (WIP).
+   - Core Tool: Kanban Board (Columns like To-Do, In Progress, Review, Done).
+   - Best For: Operations, maintenance teams, continuous product updates.
+   - Pros: Flexible priority adjustments, visual transparency, steady workflow.
+   - Cons: Less structured for time-bound milestones without explicit sprints.
+
+C. LEAN DEVELOPMENT
+   - Overview: Adapted from Lean Manufacturing, focusing on maximizing customer value 
+     while eliminating waste (delays, unnecessary features, excessive motion).
+   - Best For: Startups, resource-constrained teams seeking high efficiency.
+
+D. EXTREME PROGRAMMING (XP)
+   - Overview: An Agile sub-framework emphasized in software engineering that stresses 
+     technical quality, pair programming, automated testing, and frequent releases.
+
+
+4. HYBRID & PROCESS IMPROVEMENT FRAMEWORKS
+--------------------------------------------------------------------------------
+Combines elements from multiple frameworks to handle complex, evolving projects.
+
+A. HYBRID AGILE-WATERFALL
+   - Overview: Uses Waterfall for upfront planning, design, and architecture, while 
+     employing Scrum or Kanban for iterative development and testing.
+   - Best For: Hybrid projects blending hardware and software development.
+
+B. SIX SIGMA / DMAIC
+   - Overview: A data-driven framework focused on defect reduction and quality control.
+   - DMAIC Phases: Define, Measure, Analyze, Improve, Control.
+   - Best For: Quality assurance, manufacturing optimization, process improvement.
+
+
+5. STRATEGIC & GOAL-SETTING FRAMEWORKS
+--------------------------------------------------------------------------------
+A. PMBOK PROCESS GROUPS (PMI)
+   - Overview: Maintained by the Project Management Institute (PMI), structuring 
+     projects into 5 Process Groups:
+     1. Initiating
+     2. Planning
+     3. Executing
+     4. Monitoring & Controlling
+     5. Closing
+   - Applied alongside 10 Knowledge Areas (Scope, Schedule, Cost, Quality, Risk, etc.).
+
+B. OKRs (OBJECTIVES AND KEY RESULTS)
+   - Overview: A goal-setting framework used to align project outcomes with overall 
+     organizational vision.
+   - Objective: High-level qualitative goal.
+   - Key Results: 3-5 quantitative metrics defining success.
+
+
+6. FRAMEWORK SELECTION CHECKSHEET
+--------------------------------------------------------------------------------
+Use the following criteria to choose the right framework:
+
+Criteria               | Recommended Framework
+--------------------------------------------------------------------------------
+Fixed scope & budget   | Waterfall or PRINCE2
+Fast-changing market   | Scrum or Kanban
+Continuous workflow    | Kanban
+Quality/Defect focus   | Six Sigma
+Large-scale hybrid    | Hybrid (Waterfall + Agile)
+Startup / MVP focus    | Lean / Scrum
+================================================================================
