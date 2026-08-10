@@ -1,0 +1,76 @@
+================================================================================
+                    SYSTEM DESIGN IN DATA SCIENCE & MLOPS
+================================================================================
+
+1. OVERVIEW & ARCHITECTURAL OBJECTIVES
+--------------------------------------------------------------------------------
+System design in data science bridges machine learning algorithms with robust,
+scalable, and fault-tolerant software engineering practices. Unlike traditional
+software systems that focus on code state, machine learning systems must manage
+three interconnected dependencies: Code, Data, and Models.
+
+Key Goals:
+  - Scalability: Process terabytes of training data and serve thousands of requests/sec.
+  - Reproducibility: Ensure identical output given identical code, data, and parameters.
+  - Low Latency: Provide inference within strict SLA limits (e.g., <50ms for real-time).
+  - Continuous Delivery: Support seamless model updates without service downtime.
+
+
+2. DATA INGESTION & FEATURE ENGINEERING
+--------------------------------------------------------------------------------
+A. Ingestion Engines:
+   - Batch Ingestion: Apache Airflow, Prefect, or Dagster orchestrating ETL pipelines.
+   - Streaming Ingestion: Apache Kafka, AWS Kinesis, or Apache Flink for real-time events.
+
+B. Feature Store Architecture:
+   - Offline Store: High-throughput storage (Data Lakes/Warehouses like S3, BigQuery)
+     used for model training and historical analysis.
+   - Online Store: Low-latency, high-availability key-value store (Redis, Cassandra,
+     DynamoDB) used for live inference feature retrieval.
+   - Prevents Training-Serving Skew by ensuring identical feature extraction logic.
+
+
+3. MODEL TRAINING & EXPERIMENT MANAGEMENT
+--------------------------------------------------------------------------------
+A. Environment & Distributed Compute:
+   - Containerization via Docker & Kubernetes for reproducible compute environments.
+   - Distributed framework integration (Ray, PyTorch DDP, Horovod) across GPU clusters.
+
+B. Lineage & Tracking:
+   - Data Versioning: DVC or LakeFS for tracking data states alongside Git commits.
+   - Experiment Tracking: MLflow, Weights & Biases, or Neptune to log metrics,
+     hyperparameters, and model artifacts.
+
+
+4. MODEL INFERENCE & SERVING PATTERNS
+--------------------------------------------------------------------------------
++-------------------+--------------------+------------------+-----------------------+
+| Serving Pattern   | Latency Profile    | Resource Cost    | Primary Use Case      |
++-------------------+--------------------+------------------+-----------------------+
+| Batch Inference   | High (Mins/Hours)  | Low (Scheduled)  | Weekly Churn Scoring  |
+| Real-Time REST/gRPC| Low (<100ms)       | Persistent Cost  | Fraud Detection       |
+| Streaming/Async   | Medium (1s - 10s)  | Queue-based      | Document OCR Parsing  |
+| Edge Serving      | Ultra-Low (<10ms)  | On-Device        | Mobile Camera Filters |
++-------------------+--------------------+------------------+-----------------------+
+
+
+5. DEPLOYMENT & RELEASE STRATEGIES
+--------------------------------------------------------------------------------
+- Shadow Deployment: Traffic is routed to both old and candidate models, but only old
+  model predictions are returned to the user. Validates candidate in real environment.
+- Canary Deployment: Small percentage of traffic (e.g., 5%) routed to new model,
+  gradually increased if latency and error rates remain stable.
+- A/B Testing: Split live traffic between two models to measure business impact.
+
+
+6. MONITORING & CONTINUOUS RETRAINING (CT)
+--------------------------------------------------------------------------------
+- Data Drift (Input): Detects changes in input feature distributions P(X) using
+  tests like Kolmogorov-Smirnov (KS) or Population Stability Index (PSI).
+- Concept Drift (Relationship): Detects shifts in P(Y|X) where true labels change
+  relative to incoming features.
+- Performance Metrics: Tracks system operational metrics (CPU, Memory, Latency) alongside
+  ML metrics (Accuracy, Precision, Recall, RMSE).
+- Automated Triggers: Initiates retraining pipelines based on schedule, performance
+  degradation, or data drift thresholds.
+================================================================================
