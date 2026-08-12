@@ -1,0 +1,44 @@
+================================================================================
+                        AI AGENTS VS. MODEL CONTEXT PROTOCOL (MCP)
+================================================================================
+
+1. WHAT IS AN AI AGENT?
+--------------------------------------------------------------------------------
+An AI Agent is an autonomous software system powered by a Large Language Model 
+(LLM) designed to accomplish multi-step goals through reasoning, planning, and 
+tool execution.
+
+Key Components:
+* Brain (LLM): Handles logic, decision-making, and step-by-step planning.
+* Memory: Stores short-term conversation context and long-term data (vector databases).
+* Tools & Actions: Interacts with external systems (e.g., executing code, API calls).
+* Execution Loop: Continuously evaluates progress until a objective is completed.
+
+
+2. WHAT IS MODEL CONTEXT PROTOCOL (MCP)?
+--------------------------------------------------------------------------------
+MCP (developed by Anthropic) is an open-standard communication protocol designed 
+to connect AI models safely and uniformly to external context, data, and tools.
+
+Key Components:
+* MCP Host/Client: The platform hosting the model (e.g., IDEs, desktop applications).
+* MCP Server: Exposes specific local/remote tools, filesystems, or databases.
+* Standardized Schema: Defines unified rules for data retrieval and function invocation.
+
+
+3. KEY COMPARISON
+--------------------------------------------------------------------------------
+FEATURE              | AI AGENT                      | MODEL CONTEXT PROTOCOL (MCP)
+---------------------|-------------------------------|----------------------------------
+Primary Role         | Autonomous reasoning & action | Standardized data & tool access
+Analogy              | The Worker / Specialist       | The USB-C Cable / Standard Port
+Main Focus           | Multi-step execution & logic  | Interoperability & security
+System Level         | High-level workflow orchestration | Low-level integration layer
+
+
+4. HOW THEY WORK TOGETHER
+--------------------------------------------------------------------------------
+* Without MCP: Developers must build custom API integrations for every tool an agent uses.
+* With MCP: Agents connect directly to any MCP-compliant server to access data and 
+  run tools automatically without requiring specialized integration code for each system.
+================================================================================
