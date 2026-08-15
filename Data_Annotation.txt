@@ -1,0 +1,45 @@
+================================================================================
+                        DATA ANNOTATION: AN OVERVIEW
+================================================================================
+
+1. WHAT IS DATA ANNOTATION?
+---------------------------
+Data annotation is the process of labeling unorganized or raw data (such as 
+images, text, audio, or video) so that machine learning models can recognize 
+patterns and make accurate predictions. It bridges the gap between raw human-
+readable data and machine-understandable training datasets.
+
+2. CORE TYPES OF DATA ANNOTATION
+--------------------------------
+A. Computer Vision (Image & Video)
+   - Bounding Boxes: Drawing rectangles around objects (e.g., cars, pedestrians).
+   - Semantic Segmentation: Labeling every pixel in an image by class.
+   - Polygon Annotation: Tracing complex shapes for precise object boundaries.
+   - Keypoint/Landmark Annotation: Tagging specific points (e.g., facial landmarks, body joints).
+   - 3D Cuboids: Annotating objects in 3D space for spatial awareness (e.g., LiDAR in self-driving cars).
+
+B. Natural Language Processing (Text)
+   - Named Entity Recognition (NER): Identifying entities like names, dates, locations, and organizations.
+   - Sentiment Analysis: Tagging text as positive, negative, or neutral.
+   - Text Classification: Categorizing documents or messages into predefined classes.
+   - Intent Classification: Identifying the user's intent in conversational AI/chatbots.
+
+C. Audio Annotation
+   - Speech-to-Text Transcription: Converting spoken language into written text with timestamps.
+   - Sound Classification: Labeling background noises, acoustic events, or voices.
+
+3. KEY STEPS IN THE ANNOTATION WORKFLOW
+---------------------------------------
+1. Data Collection: Gathering raw unstructured data.
+2. Guideline Creation: Setting precise labeling rules and edge-case policies.
+3. Labeling: Annotators tag data using specialized tools.
+4. Quality Assurance (QA): Auditing labeled data for accuracy and consistency.
+5. Model Training: Feeding annotated data into the ML pipeline.
+
+4. WHY DATA ANNOTATION IS CRITICAL FOR AI
+------------------------------------------
+- High Quality Supervised Learning: Models rely heavily on labeled data to learn ground truth.
+- Reducing Bias & Error: Consistent guidelines minimize false positives and model drift.
+- Domain Specificity: Expert annotation enables AI in specialized fields like healthcare (radiology scans) and finance.
+
+================================================================================
