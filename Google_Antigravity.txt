@@ -1,0 +1,53 @@
+===================================================================
+                    GOOGLE ANTIGRAVITY / GOOGLE GRAVITY
+===================================================================
+
+1. OVERVIEW
+-------------------------------------------------------------------
+Google Antigravity (often referenced interchangeably with Google Gravity) 
+is an interactive web-based Easter egg and physics experiment originally 
+created by Ricardo Cabello (Mr.doob) in 2009 using HTML5, JavaScript, 
+and 2D physics engines.
+
+Instead of a static Google search homepage, the interface components 
+(the Google logo, search bar, buttons, and navigation links) float 
+upward or collapse under simulated gravity.
+
+
+2. HOW IT WORKS
+-------------------------------------------------------------------
+- Physics Engine: Uses JavaScript physics libraries (such as Box2DJS 
+  or Matter.js) to treat DOM elements as dynamic rigid bodies.
+- Drag & Throw: Users can click and drag individual page elements 
+  (like the "I'm Feeling Lucky" button or Google logo) and toss them 
+  around the browser viewport.
+- Fully Functional Search: Although the buttons and search bar are 
+  scrambled or floating, typing into the search bar and hitting Enter 
+  will still fetch search results, which then fall/float into the window.
+
+
+3. KEY VARIATIONS
+-------------------------------------------------------------------
+* Google Gravity:
+  The elements fall down to the bottom of the screen as if pulled 
+  by normal Earth gravity.
+
+* Google Antigravity (Zero Gravity):
+  The elements float slowly upward toward the top or drift freely 
+  across the screen as if floating in outer space / zero-G.
+
+
+4. HOW TO TRY IT
+-------------------------------------------------------------------
+1. Open any web browser and go to elgoog.im/gravity or elgoog.im/underwater
+2. Alternatively, search "Google Gravity" or "Google Anti Gravity" on 
+   Google and click "I'm Feeling Lucky".
+3. Move your mouse or tap elements to interact with the physics.
+
+
+5. HISTORICAL CONTEXT
+-------------------------------------------------------------------
+Created during the late 2000s era of web experiments to demonstrate the 
+growing power of modern browsers executing complex JavaScript physics 
+and HTML5 canvas animations without needing third-party plugins like Flash.
+===================================================================
