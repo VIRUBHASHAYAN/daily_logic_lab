@@ -1,0 +1,62 @@
+ARIMA: A Simple Guide to Time Series Forecasting
+=================================================
+
+WHAT IS ARIMA?
+--------------
+ARIMA stands for AutoRegressive Integrated Moving Average. 
+
+It is a classic statistical model used to predict future points in a time series (data collected over regular intervals, such as daily stock prices, monthly sales, or hourly temperature).
+
+Think of ARIMA as an intelligent trend analyst that looks at past values and past prediction errors to guess what happens next.
+
+
+THE 3 PARTS OF ARIMA (p, d, q)
+-------------------------------
+An ARIMA model is described by three numbers: ARIMA(p, d, q).
+
+1. AR (AutoRegressive) -> Parameter 'p'
+   - Concept: "The past predicts the future."
+   - Meaning: It uses past values of the data to predict current values.
+   - Analogy: If yesterday and the day before were hot, today will likely be hot too.
+   - 'p' represents how many past time periods (lags) the model looks back at.
+
+2. I (Integrated) -> Parameter 'd'
+   - Concept: "Making the data steady."
+   - Meaning: It subtracts current values from previous values to remove trends or seasonality (a process called "differencing").
+   - Why it matters: Time series models work best on "stationary" data (data whose average value doesn't drift upward or downward over time).
+   - 'd' represents how many times you have to difference the data to make it flat/steady.
+
+3. MA (Moving Average) -> Parameter 'q'
+   - Concept: "Learning from past mistakes."
+   - Meaning: It looks at the errors (shocks or unexpected spikes) from past predictions and uses them to correct future predictions.
+   - Analogy: If an unexpected heatwave made your prediction off yesterday, you adjust today's expectation based on that error.
+   - 'q' represents how many past prediction errors the model factors in.
+
+
+REAL-WORLD EXAMPLE: DAILY ICE CREAM SALES
+------------------------------------------
+Imagine you run an ice cream shop and want to forecast tomorrow's sales.
+
+* AR part (p=1): Looks at yesterday's sales. (High sales yesterday suggest high sales today.)
+* I part (d=1): Account for the summer trend where sales are rising daily by subtracting yesterday's total from today's total to focus on relative growth.
+* MA part (q=1): Adjusts for unexpected events. (If an unannounced street festival caused a spike in sales yesterday, the model accounts for that surprise error when predicting today.)
+
+
+PROS AND CONS OF ARIMA
+-----------------------
+Pros:
++ Very effective for short-term forecasting.
++ Requires only historical time-series data (no need for complex extra features).
++ Grounded in solid, reliable statistical theory.
+
+Cons:
+- Performs poorly on complex, highly non-linear data.
+- Struggles with long-term predictions (errors compound over time).
+- Basic ARIMA cannot automatically handle seasonal patterns (you need SARIMA for data with strong repeating cycles like monthly retail sales).
+
+
+WHEN TO USE ARIMA?
+------------------
+- Predicting stock market indices or exchange rates (short-term).
+- Forecasting energy demand, web traffic, or product sales over days or weeks.
+- Any time-ordered dataset that exhibits clear historical patterns or trends.
