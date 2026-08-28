@@ -1,0 +1,98 @@
+================================================================================
+                    JOB MARKET ANALYSIS & OUTLOOK FOR FRESHERS (2026)
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+The job market for university graduates and entry-level professionals in 2026 is 
+defined by rapid technological convergence, high demand for AI-fluent talent, 
+and a shift toward dynamic, skill-based hiring over traditional pedigree. 
+
+While macroeconomic stabilization has restored steady hiring across major tech 
+and engineering hubs, employers are significantly more selective. Freshers who 
+possess practical, cross-disciplinary skills (e.g., domain expertise paired with 
+AI tool proficiency) hold a clear competitive edge.
+
+--------------------------------------------------------------------------------
+2. KEY HIRING SECTORS & DEMAND
+--------------------------------------------------------------------------------
+• Artificial Intelligence & Machine Learning:
+  - High demand for entry-level Prompt Engineers, AI QA/Testing Engineers, 
+    Data Pipeline Assistants, and Junior ML Developers.
+  - Understanding of LLM API integration, retrieval-augmented generation (RAG), 
+    and vector databases is highly sought after.
+
+• Software Development & Cybersecurity:
+  - Strong demand for Cloud Engineers (AWS/Azure/GCP), Full-Stack Developers 
+    (React, Node.js, Python), and Application Security Assistants.
+  - DevSecOps awareness is increasingly required even for fresh software engineering graduates.
+
+• Data Analytics & Business Intelligence:
+  - Data Analyst, Business Intelligence Analyst, and Junior Data Architect roles.
+  - Essential toolkit: Python, SQL, PowerBI/Tableau, and basic statistical modeling.
+
+• EV, Clean Energy & Green Tech:
+  - High growth in Electric Vehicle (EV) engineering, battery technology, 
+    renewable energy grid management, and sustainability analytics.
+
+• Healthcare Tech & Biotechnology:
+  - Bioinformatics, digital health platforms, biomedical instrumentation, 
+    and health data management.
+
+• Core Engineering (ECE, Mechanical, Electrical):
+  - Embedded systems, IoT design, semiconductor manufacturing, and robotics 
+    process automation (RPA).
+
+--------------------------------------------------------------------------------
+3. TOP SKILLS DEMANDED BY EMPLOYERS IN 2026
+--------------------------------------------------------------------------------
+Technical Skills:
+  1. AI Tooling & Automation (GitHub Copilot, LangChain, Claude API, custom agent building)
+  2. Data Literacy (SQL, Python, Advanced Data Visualization)
+  3. Cloud Platforms & Infrastructure Fundamentals
+  4. Version Control & CI/CD Pipelines (Git, Docker basics)
+
+Soft Skills & Adaptability:
+  1. Critical Thinking & Problem Solving (evaluating AI-generated output for accuracy)
+  2. Communication & Asynchronous Collaboration (remote/hybrid team workflows)
+  3. Agility & Continuous Learning (adapting to rapidly evolving software tools)
+
+--------------------------------------------------------------------------------
+4. SALARY EXPECTATIONS & COMPENSATION TRENDS (INDIA / GLOBAL OVERVIEW)
+--------------------------------------------------------------------------------
+India Market Trends:
+  • IT & Product Software: ₹4.5 LPA – ₹12 LPA (Top product companies offer ₹15–25+ LPA)
+  • Data Analytics & AI: ₹5.0 LPA – ₹10 LPA
+  • Core Engineering & EV: ₹4.0 LPA – ₹8.0 LPA
+  • Digital Marketing & Content Strategy: ₹3.5 LPA – ₹6.0 LPA
+
+Global Market Trends (US/EU/Global Remote):
+  • Software Engineering: $65,000 – $105,000 / year
+  • Data & Cloud Analytics: $60,000 – $90,000 / year
+  • Business Operations & Strategy: $50,000 – $75,000 / year
+
+--------------------------------------------------------------------------------
+5. RECRUITMENT & HIRING PROCESS IN 2026
+--------------------------------------------------------------------------------
+• AI-Assisted Screening: Most companies use automated resume parsing and AI video 
+  interviews to evaluate foundational communication and problem-solving.
+• Practical Assessments: Live coding, take-home projects, and hands-on portfolio 
+  reviews have largely replaced traditional rote-memorization technical quizzes.
+• Proof-of-Work Priority: GitHub repositories, published side projects, open-source 
+  contributions, and verified certifications carry more weight than GPA alone.
+
+--------------------------------------------------------------------------------
+6. ACTIONABLE ADVICE FOR FRESHERS
+--------------------------------------------------------------------------------
+1. Build a Portfolio: Show, don't just tell. Ship small projects end-to-end and host 
+   them publicly.
+2. Master AI Acceleration: Learn how to use modern AI developer/productivity tools 
+   to increase your throughput 2-3x.
+3. Network Proactively: Connect with alumni, participate in open-source communities, 
+   and share learning insights on LinkedIn.
+4. Target Niche High-Growth Sectors: Consider entry-level roles in green energy, 
+   semiconductor design, and specialized SaaS verticals.
+
+================================================================================
+Generated on: August 2026 | Comprehensive Fresher Job Market Report
+================================================================================
