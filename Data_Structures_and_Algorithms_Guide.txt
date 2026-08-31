@@ -1,0 +1,115 @@
+Data Structures and Algorithms (DSA) - Complete Guide
+
+1. INTRODUCTION TO DSA
+----------------------
+Data Structures and Algorithms (DSA) form the core foundation of computer science and software development. 
+- Data Structure: A specific way of organizing, managing, and storing data in computer memory so that it can be accessed and modified efficiently.
+- Algorithm: A step-by-step procedure or set of rules to solve a specific problem or perform a computation.
+
+Why DSA Matters:
+- Optimized Performance: Enables efficient memory usage and execution speed.
+- Problem-Solving Skills: Teaches logical thinking and structured breakdown of complex issues.
+- Technical Interviews: Essential for software engineering roles at top tech companies.
+
+
+2. ASYMPTOTIC NOTATION & COMPLEXITY ANALYSIS
+---------------------------------------------
+Time Complexity measures how execution time increases as input size (n) grows.
+Space Complexity measures the extra memory used relative to input size (n).
+
+Common Big-O Notations (Fastest to Slowest):
+- O(1)         : Constant Time (e.g., Array lookup by index)
+- O(log n)     : Logarithmic Time (e.g., Binary Search)
+- O(n)         : Linear Time (e.g., Iterating through an array)
+- O(n log n)   : Linearithmic Time (e.g., Merge Sort, Quick Sort)
+- O(n^2)       : Quadratic Time (e.g., Bubble Sort, Nested loops)
+- O(2^n)       : Exponential Time (e.g., Recursive Fibonacci)
+- O(n!)        : Factorial Time (e.g., Traveling Salesperson brute force)
+
+
+3. PRIMITIVE & LINEAR DATA STRUCTURES
+-------------------------------------
+3.1 Arrays & Strings
+    - Contiguous memory allocation.
+    - Constant time access O(1) by index.
+    - Insertion/Deletion takes O(n) time.
+
+3.2 Linked Lists (Singly, Doubly, Circular)
+    - Nodes containing data and pointer(s) to next/previous nodes.
+    - Dynamic size, non-contiguous memory allocation.
+    - Insertion/Deletion takes O(1) time if position pointer is known.
+    - Access takes O(n) time.
+
+3.3 Stacks (LIFO - Last In First Out)
+    - Key operations: Push O(1), Pop O(1), Peek O(1).
+    - Applications: Function call stack, Undo/Redo mechanisms, Expression evaluation.
+
+3.4 Queues (FIFO - First In First Out)
+    - Types: Standard Queue, Circular Queue, Priority Queue, Deque.
+    - Key operations: Enqueue O(1), Dequeue O(1).
+    - Applications: Process scheduling, BFS traversal, Task queues.
+
+
+4. NON-LINEAR DATA STRUCTURES
+-----------------------------
+4.1 Trees
+    - Hierarchical structure with a root node and child nodes.
+    - Binary Tree: Nodes have at most 2 children.
+    - Binary Search Tree (BST): Left child < Root < Right child.
+    - Balanced Trees (AVL, Red-Black): Maintain O(log n) height for efficient search/insert.
+    - Segment Tree / Fenwick Tree: Used for range queries and dynamic updates.
+
+4.2 Heaps & Priority Queues
+    - Complete binary trees satisfying the Heap property.
+    - Min-Heap: Root is minimum value.
+    - Max-Heap: Root is maximum value.
+    - Heapify: O(n) building time, O(log n) insert/extract.
+
+4.3 Graphs
+    - Collection of Vertices (V) and Edges (E).
+    - Representations: Adjacency Matrix, Adjacency List.
+    - Directed/Undirected, Weighted/Unweighted, Cyclic/Acyclic (DAG).
+
+
+5. CORE ALGORITHMIC PARADIGMS
+-----------------------------
+5.1 Searching Algorithms
+    - Linear Search: O(n) time.
+    - Binary Search: O(log n) time, requires sorted array.
+
+5.2 Sorting Algorithms
+    - Bubble, Insertion, Selection Sort: O(n^2) time, simple but inefficient.
+    - Merge Sort: O(n log n) time, stable, extra space O(n).
+    - Quick Sort: O(n log n) average time, in-place, unstable.
+    - Heap Sort: O(n log n) guaranteed time, in-place.
+    - Counting / Radix Sort: Non-comparison sorts, O(n + k) time.
+
+5.3 Graph Traversal & Pathfinding
+    - Breadth-First Search (BFS): Level-order traversal using Queue, shortest path in unweighted graphs.
+    - Depth-First Search (DFS): Explores deepest path first using Stack/Recursion.
+    - Dijkstra's Algorithm: Shortest path in weighted graph with non-negative edges (O((V+E) log V)).
+    - Bellman-Ford: Shortest path with negative edge weights.
+    - Minimum Spanning Tree (MST): Prim's and Kruskal's Algorithms.
+
+5.4 Dynamic Programming (DP)
+    - Solves complex problems by breaking them into overlapping subproblems with optimal substructure.
+    - Techniques: Memoization (Top-Down), Tabulation (Bottom-Up).
+    - Classic Problems: 0/1 Knapsack, Longest Common Subsequence (LCS), Coin Change.
+
+5.5 Greedy Algorithms
+    - Makes local optimal choices at each step hoping to reach a global optimum.
+    - Examples: Fractional Knapsack, Huffman Coding, Activity Selection.
+
+5.6 Backtracking
+    - Systematic search through state space tree, pruning invalid branches.
+    - Examples: N-Queens, Sudoku Solver, Subset Sum.
+
+
+6. RECOMMENDED DSA ROADMAP
+---------------------------
+Step 1: Pick one primary language (C++, Java, Python, or Go).
+Step 2: Master Basic Data Structures (Arrays, Strings, Linked Lists, Stacks, Queues).
+Step 3: Learn Searching, Sorting, and Recursion.
+Step 4: Master Advanced Data Structures (Trees, Heaps, Hash Tables, Graphs).
+Step 5: Solve Algorithmic Paradigms (Greedy, Dynamic Programming, Backtracking).
+Step 6: Practice problem solving on LeetCode, HackerRank, or Codeforces.
