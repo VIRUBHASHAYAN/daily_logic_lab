@@ -1,0 +1,74 @@
+DATA WAREHOUSING OVERVIEW
+
+1. DEFINITION
+A Data Warehouse (DWH) is a centralized, subject-oriented repository designed to integrate, store, and manage data from multiple disparate sources. Its primary function is to support analytical querying, business intelligence (BI), data reporting, and executive decision-making.
+
+--------------------------------------------------------------------------------
+
+2. CORE CHARACTERISTICS (Bill Inmon's Principles)
+- Subject-Oriented: Organized around specific business subjects (e.g., Sales, Customers, Inventory) rather than daily application workflows.
+- Integrated: Combines data from different internal/external systems with standardized naming conventions, encoding, and measurements.
+- Time-Variant: Preserves historical records over time (often across 5-10+ years), allowing trend analysis and time-series comparisons.
+- Non-Volatile: Data is read-only for reporting; it is appended or transformed, but historical operational records are not directly updated or deleted.
+
+--------------------------------------------------------------------------------
+
+3. ARCHITECTURE & COMPONENTS
+A typical data warehouse architecture includes three main layers:
+
+- Data Sources (Operational Layer):
+  * Relational databases (OLTP: MySQL, PostgreSQL, Oracle)
+  * ERP and CRM platforms (Salesforce, SAP)
+  * Flat files (CSV, JSON, XML) and external APIs
+
+- ETL / ELT Pipeline (Integration Layer):
+  * Extract: Ingests raw data from upstream sources.
+  * Transform: Cleans, deduplicates, standardizes, and structures the data.
+  * Load: Writes processed records into target warehouse tables.
+
+- Storage & Serving Layer:
+  * Staging Area: Temporary landing zone for raw ingest.
+  * Enterprise Data Warehouse (EDW): Unified enterprise storage.
+  * Data Marts: Specialized subsets optimized for distinct business units (e.g., Finance Mart, Marketing Mart).
+
+- Analytics Layer:
+  * SQL engines, BI dashboards (Power BI, Tableau, Looker), and data science platforms.
+
+--------------------------------------------------------------------------------
+
+4. DATA MODELING TECHNIQUES
+- Star Schema:
+  * A central Fact Table (measures, metrics, IDs) surrounded by denormalized Dimension Tables (attributes, categories).
+  * Highly performant with simpler join paths.
+
+- Snowflake Schema:
+  * Dimension tables are normalized into hierarchical lookup tables.
+  * Reduces data redundancy at the cost of more complex SQL joins.
+
+- Data Vault:
+  * Hubs (business keys), Links (relationships), and Satellites (descriptive data).
+  * Optimized for auditability and scalable enterprise ingestion.
+
+--------------------------------------------------------------------------------
+
+5. OLTP VS. OLAP COMPARISON
+Feature                 OLTP                                OLAP (Data Warehouse)
+--------------------------------------------------------------------------------
+Primary Focus           Transaction processing              Analytics and reporting
+Data Structure          Normalized (3NF)                    Denormalized (Star/Snowflake)
+Query Complexity        Simple reads/writes                 Complex analytical aggregations
+Latency Expectation     Milliseconds                        Seconds to minutes
+Write Frequency         Continuous, real-time               Batch or streaming micro-batches
+User Base               Applications, end users             Analysts, executives, data teams
+
+--------------------------------------------------------------------------------
+
+6. MODERN DATA WAREHOUSING
+Modern enterprise environments frequently run on cloud-native architectures that decouple compute from storage for elastic scaling.
+
+Common Modern Platforms:
+- Snowflake
+- Google BigQuery
+- Amazon Redshift
+- Databricks (Lakehouse architecture)
+- Microsoft Fabric / Azure Synapse Analytics
