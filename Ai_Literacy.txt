@@ -1,0 +1,71 @@
+================================================================================
+                           AI LITERACY: A PRIMER
+================================================================================
+
+1. WHAT IS AI LITERACY?
+--------------------------------------------------------------------------------
+AI Literacy is the set of skills, knowledge, and competencies that allows an 
+individual to critically understand, interact with, evaluate, and work alongside 
+Artificial Intelligence (AI) technologies effectively and ethically.
+
+Just as computer literacy became essential in the 1990s, AI literacy has become 
+a foundational skill for education, the workplace, and everyday digital life.
+
+
+2. CORE PILLARS OF AI LITERACY
+--------------------------------------------------------------------------------
+a. Conceptual Understanding (What is AI?)
+   - Differentiating between rule-based software, machine learning (ML), deep 
+     learning, and generative AI (e.g., Large Language Models).
+   - Recognizing that AI systems identify patterns in data rather than possessing 
+     human-like consciousness, beliefs, or true comprehension.
+
+b. Applied Competency (How to Use AI)
+   - Prompt Engineering: Structuring clear, contextual, and iterative instructions 
+     to achieve accurate outputs.
+   - Tool Selection: Knowing which AI tool fits a given task (e.g., data analysis, 
+     writing assistance, automated translation, code generation).
+   - Workflow Integration: Using AI to augment human productivity rather than 
+     passively accepting automated outputs.
+
+c. Critical Evaluation (Verifying AI Outputs)
+   - Hallucination Awareness: Understanding that generative models can produce 
+     plausible-sounding but entirely fabricated facts, citations, or data.
+   - Cross-Verification: Routinely validating AI-generated claims against verified 
+     primary sources.
+   - Recognizing Bias: Identifying historical, cultural, or statistical biases 
+     embedded in training datasets that skew results.
+
+d. Ethics, Safety & Governance
+   - Data Privacy: Avoiding the input of sensitive, proprietary, or personal 
+     data into public AI models without adequate enterprise safeguards.
+   - Academic & Professional Integrity: Transparent attribution of AI-assisted 
+     work and adhering to copyright and intellectual property rules.
+   - Societal Impact: Awareness of AI's effect on workforce displacement, digital 
+     divides, deepfakes, and misinformation.
+
+
+3. COMMON MISCONCEPTIONS
+--------------------------------------------------------------------------------
+- Misconception: AI is always objective and neutral.
+  Reality: AI reflects the biases, gaps, and assumptions present in its training 
+  data and tuning methodologies.
+
+- Misconception: AI "knows" things like a human does.
+  Reality: Generative AI uses probabilistic pattern matching to predict the next 
+  most likely sequence of words, pixels, or tokens.
+
+- Misconception: You need a computer science degree to be AI literate.
+  Reality: AI literacy focuses primarily on evaluation, prompt construction, 
+  and ethical reasoning—skills accessible to non-technical users.
+
+
+4. PRACTICAL FRAMEWORK FOR WORKING WITH AI (The "C-E-V" Model)
+--------------------------------------------------------------------------------
+1. Contextualize: Provide background, clear constraints, tone, and specific goals 
+   when framing a prompt or problem.
+2. Evaluate: Read the response with skepticism. Check logic, look for repetitive 
+   filler, and test edge cases.
+3. Validate: Fact-check statistics, names, and operational instructions against 
+   domain-standard references before implementation.
+================================================================================
