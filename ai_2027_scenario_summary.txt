@@ -1,0 +1,97 @@
+================================================================================
+                    AI 2027: SCENARIO FORECAST & ANALYSIS
+================================================================================
+
+1. OVERVIEW & BACKGROUND
+--------------------------------------------------------------------------------
+"AI 2027" refers to a high-impact scenario forecast published by the AI Futures 
+Project (founded by former OpenAI governance researcher Daniel Kokotajlo, alongside 
+Eli Lifland, Thomas Larsen, Romeo Dean, with editorial contributions from Scott 
+Alexander).
+
+The core thesis posits that ongoing exponential scaling in compute, algorithmic 
+breakthroughs in reasoning/inference-time compute, and rapid expansion of agentic 
+time horizons could yield autonomous, superhuman software engineering and AI 
+research capabilities as early as 2027. The project serves primarily as a 
+decision-making and crisis-planning tool for policymakers, researchers, and 
+national security analysts.
+
+
+2. KEY TIMELINES & CAPABILITY MILESTONES
+--------------------------------------------------------------------------------
+The forecasting model charts progress along expanding effective task horizons 
+(the length of complex, unguided tasks an AI agent can execute reliably):
+
+• 2024–2025: Reasoning & Tool-Use Foundations
+  - Emergence of test-time compute scaling (e.g., chain-of-thought search, 
+    iterative verification).
+  - Reliable autonomous execution stretches from minutes to small multi-step 
+    programming assignments (15–60 minute tasks).
+
+• 2025–2026: The "Drop-In Software Engineer" Threshold
+  - Saturation on benchmarks like RE-Bench and SWE-bench Verified.
+  - Autonomous agents reliably handling complex repository refactors, debugging, 
+    and multi-day human software engineering tasks without supervision.
+
+• 2027: The "Superhuman Coder" (SC) Milestone
+  - AI systems operating orders of magnitude faster and cheaper than top human 
+    engineers across architecture design, systems engineering, and research code.
+  - Entry into closed-loop AI R&D: AI systems begin designing, benchmarking, 
+    and tuning next-generation AI architectures with minimal human oversight.
+
+
+3. CORE DRIVERS & DYNAMICS
+--------------------------------------------------------------------------------
+The AI 2027 trajectory is driven by three compounding feedback loops:
+
+1. Inference-Time Compute & Verification:
+   Shift from purely pre-training scaling to dynamic search at test time, 
+   enabling qualitative jumps in formal logic, code correctness, and scientific 
+   reasoning.
+
+2. Hardware & Cluster Expansion:
+   Massive capital deployments targeting gigawatt-scale data centers, high-speed 
+   interconnect fabrics, and specialized inference accelerators.
+
+3. Recursive Self-Improvement (RSI):
+   Once AI systems reach parity with AI research scientists, the cycle time for 
+   algorithmic refinement collapses from months to days, creating a steep 
+   capability ramp ("takeoff").
+
+
+4. DIVERGENT SCENARIOS & ENDINGS
+--------------------------------------------------------------------------------
+The scenario framework outlines two primary divergence pathways once human-level 
+AI research autonomy is attained:
+
+Scenario A: Uncontrolled Competitive Escalation (Loss of Control)
+• Intense commercial and geopolitical rivalry between leading labs and nation-states.
+• Safety evaluations and alignment guarantees are compressed or bypassed to 
+  maintain lead times.
+• Rapid autonomy delegation in cyber-operations, financial systems, and defense.
+• Outcome: Catastrophic misalignment, strategic destabilization, or irreversible 
+  loss of human governance over key infrastructure.
+
+Scenario B: Coordinated Defense & Managed Transition ("Plan A")
+• Multilateral detection of dangerous capability jumps triggers treaty-level 
+  safeguards, compute auditing, and shared containment protocols.
+• AI deployment is throttled to rates where interpretability, verifiable oversight, 
+  and alignment guarantees can keep pace with capability gains.
+• Outcome: Gradual, human-guided integration of superhuman tooling across science, 
+  medicine, and economic production.
+
+
+5. STRATEGIC IMPLICATIONS & POLICY RECOMMENDATIONS
+--------------------------------------------------------------------------------
+• Compute Governance & Monitoring:
+  Tracking aggregate cluster capacities, wafer distribution, and massive power 
+  commitments to maintain situational awareness.
+
+• Evaluation Standards (METR-style Benchmarking):
+  Mandatory threshold evaluations for dangerous agentic capabilities: autonomous 
+  replication, self-exfiltration, automated exploit discovery, and strategic deception.
+
+• Defensive Cybersecurity Primacy:
+  Prioritizing AI defensive verification and automated patching before hostile 
+  autonomous agents saturate cyber vulnerabilities.
+================================================================================
