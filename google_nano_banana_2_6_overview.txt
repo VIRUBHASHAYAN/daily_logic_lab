@@ -1,0 +1,105 @@
+================================================================================
+                    GOOGLE NANO BANANA / NANO BANANA 2 (v2.6)
+                           OVERVIEW & SPECIFICATIONS
+================================================================================
+
+1. WHAT IS "NANO BANANA"?
+--------------------------------------------------------------------------------
+"Nano Banana" is the public arena alias and development codename for Google's 
+reasoning-based visual generation model suite (built directly upon the Gemini 
+multimodal and Flash architecture, such as Gemini 3.1 Flash Image and Gemini 
+Pro Image).
+
+The name gained prominence in AI evaluation arenas (like LMSYS / Arena benchmarks) 
+before and during its integration into Google AI Studio, where models were tested 
+under anonymous codenames before formal branding.
+
+Note on the "2.6" Designation:
+- "Nano Banana 2" designates the second-generation reasoning image engine 
+  powered by Google's Gemini 3.1 Flash architecture.
+- In creative workflows and benchmark comparisons, "2.6" often appears due to 
+  comparisons with Alibaba's Wan 2.6 multimodal suite, or as an interim release 
+  tag denoting point-revision updates to the Nano Banana 2 pipeline (incorporating 
+  improved temporal consistency, higher token limits, and enhanced text rendering).
+
+
+2. CORE ARCHITECTURAL CAPABILITIES
+--------------------------------------------------------------------------------
+Unlike traditional purely diffusion-based models, Nano Banana models leverage 
+Gemini's transformer-based reasoning backbone to "think" and simulate scene 
+composition, physical relationships, and prompt constraints before pixel synthesis.
+
+Key Highlights:
+- Reasoning-Guided Generation:
+  Simulates lighting physics, object gravity, and relative scale prior to 
+  rendering.
+- Native Typography & Text Adherence:
+  Renders crisp, legibly spelled text across UI mockups, signs, posters, and 
+  menus in multiple languages.
+- Iterative & Conversational Editing:
+  Supports multi-turn conversational edits (e.g., "now change the character's 
+  jacket to leather while keeping facial features identical").
+- Search & Knowledge Grounding:
+  Capable of referencing real-world landmarks, biological details, and niche 
+  objects accurately via integrated knowledge retrieval.
+- SynthID Watermarking:
+  Every generated frame carries Google's invisible SynthID watermark for 
+  provenance and AI identification.
+
+
+3. TECHNICAL SPECIFICATIONS & INPUT/OUTPUT MODES
+--------------------------------------------------------------------------------
+Parameter / Feature          Specification / Details
+-------------------          ---------------------------------------------------
+Backbone Model               Gemini 3.1 Flash Image / Pro Multimodal
+Input Modalities             Text prompts, Reference Images, PDF documents
+Context Window               65,536 to 131,072 input tokens
+Supported Aspect Ratios      Up to 14 standard aspect ratios (1:1, 16:9, 9:16, etc.)
+Native Resolutions           0.5K, 1K, 2K, and 4K native output
+Generation Latency           Fast Flash-tier response (~2 to 10 seconds)
+Output Format                High-resolution PNG / Lossless streams
+Safety & Watermarking        SynthID embedded at generation level
+
+
+4. COMMON USE CASES
+--------------------------------------------------------------------------------
+- Consistent Character Storyboarding:
+  Maintains up to 90-95% facial and wardrobe identity across multiple scenes 
+  and camera angles.
+- Commercial & Product Mockups:
+  Generates production-grade product visualization, packaging design, and 
+  e-commerce banner assets.
+- UI/UX & Infographic Layouts:
+  Creates structured diagrams, dashboards, and presentation templates with 
+  accurate label positioning.
+- Style Translation:
+  Converts reference artwork across distinct styles (e.g., photorealistic, 
+  isometric 3D render, watercolor, anime) while preserving core subject geometry.
+
+
+5. DEVELOPER INTEGRATION EXAMPLE (GOOGLE GENAI SDK)
+--------------------------------------------------------------------------------
+Using Python with the official Google GenAI SDK:
+
+    from google import genai
+    from google.genai import types
+
+    client = genai.Client()
+
+    prompt = (
+        "A hyper-realistic studio product shot of a sleek glass bottle "
+        "with embossed typography reading 'Nano 2.6', soft ambient studio "
+        "lighting, 4K resolution, 16:9 aspect ratio."
+    )
+
+    response = client.models.generate_content(
+        model="gemini-3.1-flash-image",  # Nano Banana 2 engine
+        contents=[prompt]
+    )
+
+    for part in response.parts:
+        if hasattr(part, "as_image"):
+            image = part.as_image()
+            image.save("output_nano_banana.png")
+
+================================================================================
