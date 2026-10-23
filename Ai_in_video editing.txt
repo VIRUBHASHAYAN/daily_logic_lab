@@ -1,0 +1,32 @@
+================================================================================
+                         AI IN VIDEO EDITING: A GUIDE
+================================================================================
+
+1. CORE AI TECHNOLOGIES IN VIDEO EDITING
+--------------------------------------------------------------------------------
+- Computer Vision: Object detection, face tracking, green-screen replacement, 
+  and automated scene segmentation.
+- Machine Learning (ML): Automated cut detection, pacing adjustments, rhythm 
+  matching, and style transfers.
+- Natural Language Processing (NLP): Speech-to-text transcription, automated 
+  captions/subtitles, and text-based editing (deleting filler words or 
+  rearranging clips via text scripts).
+- Generative AI: AI B-roll generation, background extension (aspect ratio 
+  resizing), and object removal (generative fill).
+
+2. KEY WORKFLOW SHIFTS
+--------------------------------------------------------------------------------
+- From Technical to Conceptual: Tedious frame-by-frame masking and tracking 
+  are reduced to single-click selections.
+- Text-Based Editing: Editing a video by reading and modifying its written 
+  transcript rather than scrubbing a timeline.
+- Automated Subtitles: Instant generation of dynamic captions with word-level 
+  timestamps and karaoke-style highlights.
+
+3. POPULAR TOOLS & PLATFORMS
+--------------------------------------------------------------------------------
+- Runway / Codex / Remotion: Natural language and code-based video manipulation.
+- FireCut / Palmier Pro / Gemini Omni Flash: Automated rough cuts, talking-head 
+  reframing, and motion graphics.
+- Traditional NLEs with AI (Premiere Pro, DaVinci Resolve): Native AI color match, 
+  voice isolation, and transcript-based editing.
