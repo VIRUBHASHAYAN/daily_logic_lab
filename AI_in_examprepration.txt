@@ -1,0 +1,23 @@
+================================================================================
+                    ARTIFICIAL INTELLIGENCE IN EXAM PREPARATION
+================================================================================
+
+1. OVERVIEW
+--------------------------------------------------------------------------------
+Artificial Intelligence (AI) has shifted exam preparation from passive rote 
+memorization to adaptive, active recall systems. By leveraging Natural Language 
+Processing (NLP), Retrieval-Augmented Generation (RAG), and spaced repetition 
+algorithms, modern AI tools act as 24/7 personal tutors tailored to individual 
+learning paces.
+
+2. CORE CAPABILITIES IN EXAM STUDY
+--------------------------------------------------------------------------------
+- Personalized Diagnostics & Gap Analysis:
+  AI evaluates practice test performance, detects recurring conceptual errors, 
+  and dynamically generates targeted practice sets for weak topics.
+
+- Automated Active Recall & Flashcard Generation:
+  Converts lengthy lecture PDFs, textbooks, or syllabus documents into active-
+  recall flashcard decks and spaced-repetition schedules (e.g., Anki, Quizlet).
+
+- Retrieval-Augmented Q&A (Document Grounding):
