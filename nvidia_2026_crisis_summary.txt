@@ -1,0 +1,18 @@
+Nvidia Corporation: Summary of Current Issues and Controversies (November 2026)
+
+As of late 2026, Nvidia is navigating one of the most severe corporate and geopolitical crises in its history, which has resulted in major leadership shifts, national security investigations, and intense market scrutiny. The core issues can be broken down into several main categories:
+
+1. Leadership Crisis and the Resignation of Jensen Huang
+On November 12, 2026, Nvidia co-founder and long-time CEO Jensen Huang resigned from his positions as president, CEO, and board member. The abrupt departure leaves the $4 trillion company without a clear successor, highlighting a massive "key-person risk" that analysts had long warned about. Chief Financial Officer Colette Kress has stepped in as the interim CEO while the board searches for a permanent replacement.
+
+2. Espionage Scandal and National Security Probe
+Huang's resignation followed the revelation of an extramarital affair with Alice Huang (no relation to Jensen), a former executive at Megaspeed International, a Singapore-based Nvidia customer. The situation escalated dramatically when U.S. intelligence agencies reported that Alice Huang is suspected of being a Chinese government agent. Nvidia's board has opened an independent investigation into the matter. While the board initially stated there was "no reason to believe" national security or trade secrets were compromised, the potential breach has drawn extreme scrutiny from U.S. lawmakers.
+
+3. Export Control Evasion and "The China Problem"
+The espionage scandal has shone a harsh light on Nvidia's overseas sales channels, specifically regarding U.S. export controls on advanced AI chips to China. Short-selling firm Culper Research previously alleged that Megaspeed International—Nvidia's largest buyer in the region—was secretly financed by Chinese tech giant Alibaba through shell companies to bypass U.S. sanctions. Recent investigations allege that a $3 billion+ pipeline of restricted computing projects in China was built around heavily restricted Nvidia processors (like the H100 and H200). 
+
+4. Insider Trading Scrutiny
+Governance watchdogs and the SEC are closely examining stock sales made by Nvidia executives leading up to the crisis. Most notably, SEC Form 4 filings revealed that Nvidia Director Mark Stevens sold approximately $946 million worth of stock between late August and early September 2026—just weeks before the scandal became public. The timing of these massive sell-offs has raised serious red flags regarding insider knowledge of the impending national security probe.
+
+5. Broader AI Industry Fallout
+The sheer scale of Nvidia's dominance in the AI hardware market means its crisis is having ripple effects across the sector. Analytics firms note that the controversy has sparked a broader public debate about trust, governance, and security within the AI industry, questioning whether private companies can be trusted to prioritize national security over profit margins and global competitiveness.
