@@ -1,0 +1,144 @@
+================================================================================
+AI STOCKS PERFORMANCE IN 2026: RECORD RALLIES, SHARP REVERSALS, AND OUTLOOK
+(Data & Market Overview Through Late November 2026)
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+2026 has been a volatile, two-part year for Artificial Intelligence (AI) stocks:
+  - First Half (H1 2026): Explosive rallies driven by massive Big Tech capital
+    expenditure ($400B+ combined), a semiconductor memory/storage boom, and
+    aggressive data-center buildouts.
+  - Second Half (H2 2026): Two major corrections—the first starting in late
+    June/July and a steeper sell-off across October and November—triggered by
+    valuation resets, bubble fears, rising data-center debt, and scrutiny over
+    enterprise AI return on investment (ROI).
+  - Late November 2026: A sharp Thanksgiving/Black Friday relief rally lifted
+    64 of 65 major tracked AI stocks, though the group remained roughly 40%
+    below its 2026 highs on average.
+
+
+2. KEY MARKET PHASES IN 2026
+--------------------------------------------------------------------------------
+
+A. The H1 Infrastructure & Memory Boom (Jan - Jun 2026)
+   - Unlike prior years dominated almost exclusively by Nvidia, the biggest
+     percentage gains in early-to-mid 2026 came from memory, flash storage,
+     rival chipmakers, and AI data-center infrastructure.
+   - Hyperscalers (Microsoft, Amazon, Alphabet, Meta) accelerated spending on
+     GPUs, custom silicon, storage, and power capacity.
+   - Memory and storage providers surged to multi-hundred-percent gains as AI
+     server demand strained global supply.
+
+B. The Summer Repricing (Late Jun - Jul 2026)
+   - The PHLX Semiconductor Index (SOX) and several major Asian chip benchmarks
+     peaked in late June 2026.
+   - Valuations repriced sharply in July amid concerns over memory-chip demand
+     durability and stretched multiples.
+
+C. The Autumn Sell-Off & Bubble Warnings (Oct - Mid-Nov 2026)
+   - A second, deeper correction hit global AI equities across October and
+     early-to-mid November, briefly pushing the Nasdaq 100 into bear-market
+     territory before a late-month bounce left it roughly 14.4% below its
+     record high.
+   - A widely cited study by researchers at London Business School and the
+     University of Cambridge placed the probability of an AI stock bubble in
+     September 2026 at between 40% and 97%.
+   - Federal Reserve officials raised concerns in October 2026 regarding the
+     rapid expansion of AI-related debt and opaque data-center financing.
+
+D. Late-November Relief Rally (Late Nov 2026)
+   - During Black Friday week (ending Nov 27, 2026), the Nasdaq 100 rebounded
+     about 6.8%, with Nvidia, Palantir, and Qualcomm each jumping roughly 20%
+     for the week as market volatility (VIX) eased below 24.
+
+
+3. SUB-SECTOR PERFORMANCE SNAPSHOT (THROUGH LATE NOVEMBER 2026)
+--------------------------------------------------------------------------------
+Note: Sample YTD returns and drawdowns below reflect split-adjusted market
+data through November 24, 2026 (prior to the Black Friday week bounce).
+
+A. Semiconductors, Memory & Storage (Mixed YTD, Huge Mid-Year Peaks)
+   Stock                Ticker   YTD Return   Gain to 2026 Peak   From Peak
+   -------------------------------------------------------------------------
+   SanDisk              SNDK      +162.7%          +883.7%          -73.3%
+   Micron Technology    MU        +120.7%          +325.2%          -48.1%
+   AMD                  AMD        +93.0%          +203.2%          -36.4%
+   Broadcom             AVGO       -13.0%           +39.1%          -37.5%
+   Nvidia               NVDA       -16.7%           +28.3%          -35.1%
+
+   * Takeaway: Memory/storage (SanDisk, Micron) and AMD retained strong YTD
+     gains despite steep autumn pullbacks, while Nvidia and Broadcom slipped
+     into negative YTD territory before staging a late-November rebound.
+
+B. Hyperscalers / Big Tech (Relatively Resilient)
+   Stock                Ticker   YTD Return   Gain to 2026 Peak   From Peak
+   -------------------------------------------------------------------------
+   Amazon               AMZN        +9.3%           +23.0%          -11.2%
+   Microsoft            MSFT        +2.6%           +14.9%          -10.7%
+   Meta Platforms       META       -10.6%           +17.8%          -24.1%
+   Alphabet             GOOGL      -10.8%           +28.6%          -30.7%
+
+   * Takeaway: Strong balance sheets and diversified cash flows insulated
+     hyperscalers from the extreme 60%-80% drawdowns seen in smaller AI names.
+
+C. Neoclouds & AI Data-Center Infrastructure (Steepest Boom-and-Bust)
+   Stock                Ticker   YTD Return   Gain to 2026 Peak   From Peak
+   -------------------------------------------------------------------------
+   Riot Platforms       RIOT       +29.0%          +126.4%          -43.0%
+   Hut 8                HUT         +5.0%          +189.6%          -63.7%
+   Nebius               NBIS        +4.3%          +242.5%          -69.5%
+   Core Scientific      CORZ       -24.5%          +100.3%          -62.3%
+   CoreWeave            CRWV       -40.5%           +92.7%          -69.1%
+   Applied Digital      APLD       -50.2%          +102.5%          -75.4%
+   IREN                 IREN       -65.7%           +79.6%          -80.9%
+
+   * Takeaway: Neoclouds and power-hungry data-center developers averaged
+     nearly 69% below their 2026 highs, illustrating severe sensitivity to
+     debt costs, capex cycles, and investor sentiment.
+
+D. Power, Energy & Grid Infrastructure
+   Stock                Ticker   YTD Return   Gain to 2026 Peak   From Peak
+   -------------------------------------------------------------------------
+   GE Vernova           GEV        +10.3%           +79.8%          -38.7%
+   Vistra               VST        -25.2%           +11.7%          -33.0%
+   Constellation Energy CEG        -30.7%            +3.7%          -33.1%
+   NRG Energy           NRG        -42.9%           +15.6%          -50.6%
+
+
+4. PRIMARY DRIVERS OF 2026 VOLATILITY
+--------------------------------------------------------------------------------
+1. Capex vs. Monetization Gap
+   Investors began questioning how quickly hundreds of billions in AI
+   infrastructure spending will translate into sustainable enterprise profits.
+
+2. Debt and Financing Risks
+   Heavy reliance on corporate debt and private credit to finance new data
+   centers raised concerns over leverage and credit quality if AI demand slows.
+
+3. Energy and Power Bottlenecks
+   Rising electricity costs and grid constraints squeezed projected margins
+   for newly constructed AI data centers.
+
+4. Valuation Compression & Concentration Risk
+   Many investors held overlapping exposure across US, Taiwanese, and South
+   Korean AI hardware chains, amplifying downside moves during sell-offs.
+
+
+5. INVESTOR TAKEAWAYS & OUTLOOK HEADING INTO 2027
+--------------------------------------------------------------------------------
+- Focus on Quality & Balance Sheets: Companies with strong free cash flow and
+  low leverage weathered the 2026 downturn far better than debt-heavy
+  infrastructure plays.
+- Diversify Across the AI Value Chain: Balancing exposure across chipmakers,
+  foundries, cloud platforms, and enterprise software reduces single-theme risk.
+- Watch Enterprise Adoption: Future stock performance in 2027 will likely hinge
+  less on hardware buildout announcements and more on measurable enterprise
+  software revenue, agentic AI adoption, and margin expansion.
+- Avoid Chasing Momentum: 2026 demonstrated that even stocks ending the year
+  with positive YTD returns can inflict 40%-70% losses on late buyers.
+
+================================================================================
+Disclaimer: This file is for informational purposes only and does not
+constitute financial or investment advice.
+================================================================================
